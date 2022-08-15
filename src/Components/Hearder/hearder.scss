@@ -1,0 +1,183 @@
+.hearder {
+    .hearder-top {
+        background-color: #099cf4;
+        .navbar {
+            padding: 6px 0;
+            #nav-top {
+                .hearder-left {
+                    .navbar-nav {
+                        letter-spacing: -0.5px;
+                        .nav-item {
+                            line-height: 24px;
+                            font-size: 12px;
+                            &:hover {
+                                .nav-link {
+                                    i {
+                                        animation-name: move;
+                                        animation-duration: 0.5s;
+                                        animation-iteration-count: infinite;
+                                    }
+                                }
+                            }
+                            .nav-link {
+                                font-weight: 600;
+                                color: #b2dcf4;
+                                i {
+                                    margin-right: 8px;
+                                    font-weight: 900;
+                                    font-size: 10px;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hearder-right {
+                    .navbar-nav {
+                        .nav-item {
+                            &:hover {
+                                .nav-link {
+                                    .facebook {
+                                        background-color: #3b5a9a;
+                                    }
+                                    .youtube {
+                                        background-color: #c3191e;
+                                    }
+                                    .linkin {
+                                        background-color: #0073b2;
+                                    }
+                                }
+                            }
+                            .nav-link {
+                                padding: 0;
+                                margin-right: 5px;
+                                i {
+                                    text-align: center;
+                                    width: 28px;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    border-radius: 50%;
+                                    font-size: 0.83rem;
+                                    color: white;
+                                    background-color: transparent;
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hearder-center {
+        .navbar {
+            #nav-center {
+                padding: 10px 0;
+                .timeworlk {
+                    i {
+                        color: #099cf4;
+                        font-size: 2em;
+                    }
+                    .time_worlk_item {
+                        p {
+                            line-height: 1.5;
+                            font-size: 0.78rem;
+                            font-weight: 600;
+                            letter-spacing: 0;
+                            color: #999;
+                            text-align: left;
+                            margin: 0 0 1.25rem;
+                        }
+                    }
+                }
+                .logo {
+                    padding: 0;
+                    width: 7vw;
+                    text-align: center;
+                }
+                .hotline {
+                    p {
+                        line-height: 1.5;
+                        font-size: 0.78rem;
+                        font-weight: 600;
+                        letter-spacing: 0;
+                        color: #999;
+                        text-align: left;
+                        margin-bottom: 0;
+                    }
+                    i {
+                        color: #099cf4;
+                        font-size: 2em;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .hearder-bottom {
+        transition: 1.5s;
+        .navbar {
+            .navbar-toggler {
+                margin-top: 10px;
+                margin-left: auto;
+                color: #fff;
+                background-color: #099cf4;
+                margin-right: 0.5rem;
+                border: none;
+                i {
+                    text-align: center;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: white;
+                }
+            }
+            #navbarText {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            font-family: Open Sans, sans-serif;
+                            font-size: 13px;
+                            font-weight: 700;
+                            line-height: 20px;
+                            letter-spacing: -0.5px;
+                            padding: 15px 10px 0 10px;
+                            margin: 0 10px;
+                            color: #444;
+                            margin-bottom: 5px;
+                        }
+
+                        .listMenu {
+                            padding-top: 5px;
+                            border-top: 3px solid #0073b2;
+                            position: absolute;
+                            background-color: white;
+                            border-bottom-left-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            box-shadow: 3px 3px 10px #888888;
+                            z-index: 9999;
+                            .dropdown-item {
+                                color: #777;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                letter-spacing: -0.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

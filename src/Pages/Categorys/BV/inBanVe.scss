@@ -1,0 +1,40 @@
+.inBanVe {
+    h4 {
+        margin: 30px 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #099cf4;
+    }
+    p {
+        font-size: 1rem;
+        color: black;
+    }
+    h5 {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    a {
+        text-decoration: none;
+        transition: 0.5S;
+    }
+    .inBanVe-content {
+        .inBanVe_banner {
+            margin: 50px 0;
+            img {
+                width: 100%;
+            }
+        }
+        .inBanVe_body {
+            .inbBanVe_item {
+                .inbBanVe_item_image {
+                    overflow: hidden;
+                    .image {
+                        img {
+                            width: 33%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

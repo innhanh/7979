@@ -1,0 +1,27 @@
+.backToHome{
+    padding: 1rem 0;
+    .backToHome-content{
+        color: white;
+        a{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: white;
+           .home{
+            font-size: 1rem;
+            margin-right: 0.5rem;
+           }
+           .right{
+            font-size: 0.8rem;
+            margin-right: 1rem;
+           }
+           &:hover{
+            .right{
+                animation-name: move;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+            }
+           }
+        }
+    }
+}

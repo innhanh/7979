@@ -1,0 +1,94 @@
+#myCarousel {
+    .carousel-indicators {
+        li {
+            color: #ff6101 !important;
+            z-index: 99999;
+        }
+    }
+    .carousel-inner {
+        .carousel-item {
+            .item_1 {
+                position: relative;
+                height: 80vh;
+                .slide_text {
+                    margin-top: 10vh;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        h1 {
+                            span {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    h1 {
+                        font-family: Montserrat, sans-serif;
+                        color: #000;
+                        font-size: 8vw;
+                        text-align: center;
+                        font-weight: 400;
+                        margin-bottom: 0;
+                        span {
+                            margin-left: 4%;
+                            font-weight: 700;
+                            transition: 0.5s;
+                            .in79 {
+                                font-weight: 700;
+                                border-top: 15px solid #ff6101;
+                            }
+                        }
+                    }
+                }
+                .slide_text_left {
+                    position: absolute;
+                    bottom: 0;
+                    left: 8vw;
+                    p {
+                        font-size: 2vw;
+                        font-family: "Montserrat", Arial, sans-serif;
+                        font-weight: 700;
+                        line-height: 1.2;
+                        span {
+                            color: #ff6101;
+                        }
+                    }
+                    .slide_text_left_over {
+                        margin-top: 30px;
+                        .over_before {
+                            margin-bottom: 0px;
+                            padding: 0;
+                            background-color: #000;
+                        }
+                        .over_author {
+                            color: #666;
+                            font-size: 18px;
+                            font-weight: 700;
+                            padding-left: 88px;
+                        }
+                    }
+                }
+                .slidetop {
+                    position: absolute;
+                    top: 0;
+                    left: 10%;
+                }
+                .slideback {
+                    z-index: -9999;
+                    position: absolute;
+                    top: 0;
+                    left: 10%;
+                }
+            }
+        }
+    }
+    .carousel-control-prev {
+        color: #ff6101 !important;
+    }
+    .carousel-control-next {
+        color: #ff6101 !important;
+        z-index: 99999;
+    }
+}
