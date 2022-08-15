@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom"
 import './App.scss';
 import Footer from './Components/Footer/Footer';
 import Hearder from './Components/Hearder/Hearder';
-import RouterConfig from './Pages/Router/RouterConfig';
+import RouterConfig from './Config/Router/RouterConfig';
 
 function App() {
   return (

@@ -1,32 +1,33 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from "react-router-dom"
-import HomePage from '../Home/HomePage';
-import IntroPage from '../Intro/Intro';
+import HomePage from '../../Pages/Home/HomePage';
+import IntroPage from '../../Pages/Intro/Intro';
 
-import Payments from '../Payment/Payments';
-import Regulation from '../Regulation/Regulation';
-import Contact from '../Contact/Contact';
-import InBanVe from '../Categorys/BV/InBanVe';
+import Payments from '../../Pages/Payment/Payments';
+import Regulation from '../../Pages/Regulation/Regulation';
+import Contact from '../../Pages/Contact/Contact';
+import InBanVe from '../../Pages/Categorys/BV/InBanVe';
 
-import InDecalKhoLon from "../Categorys/QC/InDecal/InDecalKhoLon";
-import InPP from '../Categorys/QC/InPP/InPP';
+import InDecalKhoLon from "../../Pages/Categorys/QC/InDecal/InDecalKhoLon";
+import InPP from '../../Pages/Categorys/QC/InPP/InPP';
 
-import InBaoThu from '../Categorys/InNhanh/InBaoThu/InBaoThu';
-import InCatalogue from '../Categorys/InNhanh/InCatalogue/InCatalogue';
-import InFolder from '../Categorys/InNhanh/InFolder/InFolder';
-import InGiayTieuDe from '../Categorys/InNhanh/InGiayTieuDe/InGiayTieuDe';
-import InHoaDon from '../Categorys/InNhanh/InHoaDon/InHoaDon';
-import InMenu from '../Categorys/InNhanh/InMenu/InMenu';
-import InNameCard from '../Categorys/InNhanh/InNameCard/InNameCard';
-import InNDTH from '../Categorys/InNhanh/InNDTH/InNDTH';
-import InNoteBook from '../Categorys/InNhanh/InNoteBook/InNoteBook';
-import InOffset from '../Categorys/InNhanh/InOffset/InOffset';
-import InPhotoBook from '../Categorys/InNhanh/InPhotoBook/InPhotoBook';
-import InToRoi from '../Categorys/InNhanh/InToRoi/InToRoi';
-import InTuiGiay from '../Categorys/InNhanh/InTuiGiay/InTuiGiay';
-import DecalSticker from '../Categorys/DecalSticker/DecalSticker';
+import InBaoThu from '../../Pages/Categorys/InNhanh/InBaoThu/InBaoThu';
+import InCatalogue from '../../Pages/Categorys/InNhanh/InCatalogue/InCatalogue';
+import InFolder from '../../Pages/Categorys/InNhanh/InFolder/InFolder';
+import InGiayTieuDe from '../../Pages/Categorys/InNhanh/InGiayTieuDe/InGiayTieuDe';
+import InHoaDon from '../../Pages/Categorys/InNhanh/InHoaDon/InHoaDon';
+import InMenu from '../../Pages/Categorys/InNhanh/InMenu/InMenu';
+import InNameCard from '../../Pages/Categorys/InNhanh/InNameCard/InNameCard';
+import InNDTH from '../../Pages/Categorys/InNhanh/InNDTH/InNDTH';
+import InNoteBook from '../../Pages/Categorys/InNhanh/InNoteBook/InNoteBook';
+import InOffset from '../../Pages/Categorys/InNhanh/InOffset/InOffset';
+import InPhotoBook from '../../Pages/Categorys/InNhanh/InPhotoBook/InPhotoBook';
+import InToRoi from '../../Pages/Categorys/InNhanh/InToRoi/InToRoi';
+import InTuiGiay from '../../Pages/Categorys/InNhanh/InTuiGiay/InTuiGiay';
+import DecalSticker from '../../Pages/Categorys/DecalSticker/DecalSticker';
 
-import Design from '../Categorys/Design/Design';
+import Design from '../../Pages/Categorys/Design/Design';
+import Login from '../../Pages/Admin/Login/Login';
 
 function RouterConfig(props) {
     const { pathname } = useLocation();
@@ -71,7 +72,8 @@ function RouterConfig(props) {
 
             <Route exact path='/thiet-ke-sang-tao' element={<Design />} />
 
-
+            {/* Admin */}
+            <Route exact path='/admin/login' element={<Login />} />
 
         </Routes>
     );
