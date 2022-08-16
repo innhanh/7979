@@ -1,0 +1,32 @@
+$colordark-100: #101b33;
+$colordark-200: #171e2a;
+$colordark-300: #495057;
+
+$color-yellow: #f7b924;
+
+$fs16: 16px;
+$fs20: 20px;
+$fs30: 30px;
+$fs40: 406px;
+$fs50: 50px;
+
+$fw: normal;
+$fwb: bold;
+
+@mixin styleIcon($fs, $fw, $color, $clbg) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: $clbg;
+    text-align: center;
+}
+
+@mixin textStyle($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}

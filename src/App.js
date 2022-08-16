@@ -5,6 +5,9 @@ import Footer from './Components/Footer/Footer';
 import Hearder from './Components/Hearder/Hearder';
 import RouterConfig from './Config/Router/RouterConfig';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +15,18 @@ function App() {
         <Hearder />
         <RouterConfig />
         <Footer />
+
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </BrowserRouter>
     </div>
   );

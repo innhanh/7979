@@ -28,6 +28,9 @@ import DecalSticker from '../../Pages/Categorys/DecalSticker/DecalSticker';
 
 import Design from '../../Pages/Categorys/Design/Design';
 import Login from '../../Pages/Admin/Login/Login';
+import Register from '../../Pages/Admin/Register/Register';
+import ResetPass from '../../Pages/Admin/ResetPass/ResetPass';
+import Dashboard from '../../Pages/Admin/Dashboard/Dashboard';
 
 function RouterConfig(props) {
     const { pathname } = useLocation();
@@ -74,6 +77,9 @@ function RouterConfig(props) {
 
             {/* Admin */}
             <Route exact path='/admin/login' element={<Login />} />
+            <Route exact path='/admin/register' element={<Register />} />
+            <Route exact path='/admin/resetPass' element={<ResetPass />} />
+            <Route exact path='/admin/dashboard' element={<Dashboard />} />
 
         </Routes>
     );

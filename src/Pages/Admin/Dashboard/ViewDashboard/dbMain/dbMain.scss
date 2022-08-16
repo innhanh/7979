@@ -1,0 +1,82 @@
+@import "../../../../../style/valiable";
+.dbMain {
+    width: 100%;
+    .dbMain_container {
+        width: 100%;
+        margin: 0 auto;
+        .dbMain_content {
+            width: 100%;
+            .dbMain_top {
+                width: 100%;
+                margin: 20px 0;
+
+                color: black;
+                overflow: hidden;
+                .dbMain_top_hearder {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: 1px solid gray;
+                    padding: 5px 20px;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                    background-color: white;
+                    overflow: hidden;
+                    p {
+                        margin: 0;
+                    }
+                    button{
+                        border-radius: 5px;
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        padding: 5px 10px;
+                        color: black;
+                    }
+                }
+                .dbMain_top_body {
+                    border: 1px solid gray;
+                    padding: 5px 20px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .dbMain_top_body-item {
+                        display: flex;
+                        align-items: center;
+                        .dbMain_top_body-icon {
+                            i {
+                                @include styleIcon($fs20, $fwb, $colordark-100, $color-yellow);
+                                margin-right: 1rem;
+                            }
+                        }
+                        .dbMain_top_body-info {
+                            span {
+                                @include textStyle($colordark-300, $fs16, $fw);
+                            }
+                            h5 {
+                                @include textStyle($colordark-300, $fs50, $fwb);
+                            }
+                        }
+                    }
+                }
+                .dbMain_top_footer {                    
+                    border: 1px solid gray;
+                    padding: 5px 20px;
+                    background-color: white;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    .dbMain_top_footer-item {
+                        text-align: end;
+                        span {
+                            font-size: 0.85rem;
+                            font-weight: 400;
+                            font-style: italic;
+                            color: red;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

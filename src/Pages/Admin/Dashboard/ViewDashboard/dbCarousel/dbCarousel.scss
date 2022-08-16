@@ -1,0 +1,42 @@
+.dbCarousel {
+    width: 100%;
+    padding: 30px 0;
+    .dbCarousel_container {
+        width: 95%;
+        margin: auto;
+        .dbCarousel_content {
+            .dbCarousel_item {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                color: white;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.585);
+                }
+                .dbCarousel_info {
+                    padding: 8px 10px;
+                    align-items: center;
+                    justify-content: space-between;
+                    .dbCarousel_info-left {
+                        p {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            font-style: italic;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

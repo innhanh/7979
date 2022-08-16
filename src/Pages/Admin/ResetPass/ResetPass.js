@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ApiConfig } from '../../../Config/API/apiConfig';
-import "./register.scss"
 
-function Register(props) {
+function ResetPass(props) {
     const [userName, setUserName] = useState("");
     const [pass, setPass] = useState("");
     const [key, setKey] = useState("");
-    const [email, setEmail] = useState("");
-    const [tel, setTel] = useState("");
 
-    const navigate = useNavigate();
-
-    const HandleRegister = async () => {
-        await ApiConfig.Admin.Authen.Register(userName, pass, email, tel, key, navigate)
+    const Login = async () => {
+        await ApiConfig.Admin.Authen.Login(userName, pass, key)
     };
     return (
-        <div className='adminRegister'>
+        <div className='resetPass'>
             <div className="wrapper fadeInDown">
                 <div id="formContent">
                     {/* <!-- Tabs Titles --> */}
@@ -31,13 +26,11 @@ function Register(props) {
                     {/* <!-- Login Form --> */}
                     <div>
                         <input type="text" id="userName" className="fadeIn second" placeholder="User Name" onChange={(e) => setUserName(e.target.value)} value={userName} />
-                        <input type="text" id="password" className="fadeIn third" placeholder="Passworld" onChange={(e) => setPass(e.target.value)} value={pass} />
-
-                        <input type="text" id="key" className="fadeIn fourth" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-                        <input type="text" id="key" className="fadeIn fourth" placeholder="Tel" onChange={(e) => setTel(e.target.value)} value={tel} />
+                        <input type="text" id="password" className="fadeIn third" placeholder="New Password" onChange={(e) => setPass(e.target.value)} value={pass} />
+                        <input type="text" id="password" className="fadeIn third" placeholder="New Password" onChange={(e) => setPass(e.target.value)} value={pass} />
                         <input type="text" id="key" className="fadeIn fourth" placeholder="Key Admin" onChange={(e) => setKey(e.target.value)} value={key} />
-
-                        <input type="button" className="fadeIn five" value="Register" onClick={() => HandleRegister()} />
+                       
+                        <input type="button" className="fadeIn five" value="Reset Passworld" onClick={() => Login()} />
                     </div>
 
                     {/* <!-- Remind Passowrd --> */}
@@ -52,4 +45,4 @@ function Register(props) {
     );
 }
 
-export default Register;
+export default ResetPass;
