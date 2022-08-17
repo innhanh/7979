@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from "react-router-dom";
 import { ApiConfig } from '../../../Config/API/apiConfig';
+import { loginAdminSuccess } from '../../../Redux/Slice/AdminSlice';
 import "./login.scss";
 function Login(props) {
     const [userName, setUserName] = useState("");
     const [pass, setPass] = useState("");
     const [key, setKey] = useState("");
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const Login = async () => {
-        await ApiConfig.Admin.Authen.Login(userName, pass, key, navigate)
+        await ApiConfig.Admin.Authen.Login(userName, pass, key, navigate, dispatch, loginAdminSuccess)
     };
     return (
         <div className='adminLogin mt-3 mb-5'>

@@ -1,31 +1,105 @@
 @import "../../../style/valiable";
 
 .dashboard {
-    background-color: #4680ff;
+    background-color: $colordark-100;
     color: white;
     width: 85%;
     margin: 0 auto;
-    .navbar {
+    .bar {
         width: 25%;
-        background-color: $colordark-100;
-        .navbar-nav {
-            width: 100%; 
-            .nav-item {
-                .nav-link {
+        padding: 2rem 0 0 0;
+        background-color: $colordark-200;
+        border-bottom: 1px solid white;
+        .bar_user {
+            padding: 0 2rem;
+            .avatar {
+                margin: 0 auto;
+                text-align: center;
+                img {
+                    width: 150px;
                 }
-                .item {
+            }
+            .user_info {
+                margin-bottom: 2rem;
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        .bar_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.3rem;
+            border: 1px solid white;
+            cursor: pointer;
+            &:hover {
+                span {
+                    i {
+                        animation-name: move;
+                        animation-duration: 0.5s;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+            span {
+                i {
+                    margin-right: 1rem;
+                    font-size: 0.8rem;
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+            i {
+                font-size: 1.3rem;
+                color: white;
+                font-weight: 700;
+            }
+        }
+        .bar_children {
+            width: 100%;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            padding: 0;
+            margin: 0;
+
+            .bar_children_content {
+                margin: 0;
+                text-align: center;
+                .bar_children_item {
                     width: 100%;
-                    button{
-                        width: 100%;
-                        border: none;
+                    margin: 0 auto;
+                    transition: 0.5s;
+                    &:hover {
+                        background-color: $colordark-100;
+                    }
+
+                    button {
+                        width: 90%;
+                        margin: 0 auto;
                         text-align: left;
-                        background-color: $colordark-200;
+                        padding: 0.7rem !important;
+                        background-color: transparent;
+                        padding: 0;
+                        border: none;
+                        color: white;
                     }
                 }
             }
         }
     }
-    .dashboard-main{
+
+    .dashboard-main {
         width: 75%;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(-10vh) rotate(-360deg);
     }
 }

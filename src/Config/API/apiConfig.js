@@ -1,4 +1,7 @@
+import { toast } from "react-toastify";
+
 const baseURL = "http://localhost:8000/api/v1";
+
 
 const axios = require("axios");
 
@@ -23,7 +26,7 @@ export const ApiConfig = {
                     console.log(err)
                 })
             },
-            Login: async (userName, pass, key, navigate) => {
+            Login: async (userName, pass, key, navigate, dispatch, loginAdminSuccess) => {
                 await axios({
                     method: "post",
                     url: baseURL + "/admin/login",
@@ -34,7 +37,8 @@ export const ApiConfig = {
                     }
                 }).then((res) => {
                     console.log(res.data);
-                    navigate("/admin/dashboard")
+                    dispatch(loginAdminSuccess(res.data.admin))
+                    navigate("/admin/dashboard");
                 }).catch((err) => {
                     console.log(err)
                 })
@@ -44,14 +48,18 @@ export const ApiConfig = {
             }
         },
         Image: {
-            GetListImage: async (type, dispath, action) => {
+            GetListImage: async (dispatch, actionSuccess, type) => {
                 await axios({
                     method: "get",
                     url: baseURL + `/admin/listImage/${type}`,
                 }).then((res) => {
-                    dispath(action(res.data.listImage));
+                    dispatch(actionSuccess(res.data.listImage));
                 }).catch((err) => {
-                    alert(err)
+                    if (err.response) {
+                        toast.error(err.response.data.error)
+                    } else {
+                        console.log("Error", err.message);
+                    }
                 })
             },
             UploadImage: async (type, name, photo) => {

@@ -13,6 +13,15 @@ $fs50: 50px;
 $fw: normal;
 $fwb: bold;
 
+$bgColor: #ffffff;
+$borderColor: #15cb6a;
+
+// sizes
+$avatarSize: 130px;
+$borderWidth: 5px;
+$paddingSize: 20px;
+$translateValue: -$paddingSize - $borderWidth;
+
 @mixin styleIcon($fs, $fw, $color, $clbg) {
     font-size: $fs;
     font-weight: $fw;

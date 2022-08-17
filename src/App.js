@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Hearder />
         <RouterConfig />
-        <Footer />
+        <Footer />        
 
         <ToastContainer
           position="bottom-right"
