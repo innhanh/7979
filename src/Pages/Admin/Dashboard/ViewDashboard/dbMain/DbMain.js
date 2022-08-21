@@ -1,6 +1,8 @@
 import React from 'react';
 import "./dbMain.scss";
 
+import UserSvg from '../../../../../Config/icon/UserSvg';
+
 function DbMain(props) {
     return (
         <div className='dbMain'>
@@ -43,17 +45,7 @@ function DbMain(props) {
                             </div>
 
                             <div id='item3' className='dbMain_top_body-item'>
-                                <div className='dbMain_top_body-icon'>
-                                    <i class="fa fa-chalkboard-teacher"></i>
-                                </div>
-                                <div className='dbMain_top_body-info'>
-                                    <span>Tổng Lượt Truy Cập</span>
-                                    <h5>1,7M</h5>
-                                    <span>
-                                        <i className="fa fa-angle-down"></i>
-                                        <span className='text-danger'>54.1%<span>less earnings</span></span>
-                                    </span>
-                                </div>
+                                <UserSvg />
                             </div>
 
                         </div>

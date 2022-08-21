@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./hearder.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../Access/Image/logo.png";
 
 const listMenu = [
@@ -13,7 +13,7 @@ const listMenu = [
         name: "IN QUẢNG CÁO",
         menu: [
             { title: "IN PP", linkTitle: "in-qc-pp" },
-            { title: "IN DECAL KHỔ LỚN", linkTitle: "in-decal-kho-lon" },          
+            { title: "IN DECAL KHỔ LỚN", linkTitle: "in-decal-kho-lon" },
         ]
     },
     {
@@ -48,7 +48,9 @@ const listMenu = [
 
 function Hearder(props) {
     const [menu, setMenu] = useState("");
-    const [scrollY, setScrollY] = useState();    
+    const [scrollY, setScrollY] = useState();
+    const { pathname } = useLocation();
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -71,14 +73,14 @@ function Hearder(props) {
                 hearderTop.classList.add("hide");
                 hearderCenter.classList.add("hide");
                 hearderBottom.classList.add("scr_bar");
-              
+
                 buttonScrollToTop.classList.remove("hide");
                 buttonScrollToTop.classList.add("show");
             } else {
                 hearderTop.classList.remove("hide");
                 hearderCenter.classList.remove("hide");
                 hearderBottom.classList.remove("scr_bar");
-              
+
                 buttonScrollToTop.classList.remove("show");
                 buttonScrollToTop.classList.add("hide");
             }
@@ -142,7 +144,7 @@ function Hearder(props) {
                 </div>
             </div>
 
-            <div className='hearder-center' id='hearder_center'>
+            <div className={pathname === "/admin/login" ? "d-none" : 'hearder-center'} id='hearder_center'>
                 <div className='container'>
                     <nav className="navbar navbar-expand-lg navbar-light">
 
@@ -171,7 +173,7 @@ function Hearder(props) {
                 </div>
             </div>
 
-            <div className='hearder-bottom border-top' id='hearder_bottom'>
+            <div className={pathname === "/admin/login" ? "hide" : 'hearder-bottom border-top'} id='hearder_bottom'>
                 <div className='container'>
                     <nav className="navbar navbar-expand-lg navbar-light pt-0">
 
