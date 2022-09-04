@@ -4,8 +4,13 @@ import "./carousel.scss";
 
 import slideback from "../../Access/Image/BannerHome/slider-back-1.png";
 import slidetop from "../../Access/Image/BannerHome/slider-top-1.png";
+import bannerHome from "../../Access/SVG/Banner_Home.svg";
+import BannerHome from './BannerHome';
 
 function Carousel(props) {
+    const GetCarousel = async () => {
+
+    }
     return (
         <div className='container'>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -17,39 +22,22 @@ function Carousel(props) {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div className='item_1 container'>
-                            <div className='slide_text'>
-                                <h1>In<span>NHANH<span className='in79'>79</span></span></h1>
-                            </div>
-                            <div className='slide_text_left'>
-                                <p>In BẢN VẼ <br /><span>In NHANH</span> & <br />In QUẢNG CÁO</p>
-
-                                <div className='slide_text_left_over'>
-                                    <p className='over_before'></p>
-                                    <p className='over_author'>Printography 2017</p>
+                            <BannerHome />
+                            <div className='item_1_text'>
+                                <h1>In <span>BẢN VẼ</span></h1>
+                                <h1>In <span>NHANH <span>{"&"}</span></span></h1>
+                                <h1>In <span>QUẢNG CÁO</span></h1>
+                                <div class="svg-wrapper">
+                                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                        <rect class="shape" height="60" width="320" />                                       
+                                    </svg>
+                                    <button className='btn btn_more'>Xem Thêm</button>
                                 </div>
                             </div>
-                            <img src={slidetop} class="slidetop img-fluid w-100" alt="slideTop" />
-                            <img src={slideback} class="slideback img-fluid w-100" alt="slideBack" />
                         </div>
 
                     </div>
-                    <div class="carousel-item">
-                        <div className='item_1 container'>
-                            <div className='slide_text'>
-                                <h1>In<span>GIÁ<span className='in79'>TỐT</span></span></h1>
-                            </div>
-                            <div className='slide_text_left'>
-                                <p>In BẢN VẼ <br /><span>In KỸ THUẬT SỐ</span> & <br />In QUẢNG CÁO</p>
 
-                                <div className='slide_text_left_over'>
-                                    <p className='over_before'></p>
-                                    <p className='over_author'>Printography 2017</p>
-                                </div>
-                            </div>
-                            <img src={slidetop} class="slidetop" alt="slideTop" />
-                            <img src={slideback} class="slideback" alt="slideBack" />
-                        </div>
-                    </div>
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">

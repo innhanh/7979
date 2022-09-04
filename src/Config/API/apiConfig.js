@@ -23,7 +23,11 @@ export const ApiConfig = {
                     console.log(res.data);
                     navigate("/admin/login")
                 }).catch((err) => {
-                    console.log(err)
+                    if (err.response) {
+                        toast.error(err.response.data.error)
+                    } else {
+                        toast.error(err)
+                    }
                 })
             },
             Login: async (userName, pass, key, navigate, dispatch, loginAdminSuccess) => {
@@ -78,5 +82,14 @@ export const ApiConfig = {
                 })
             }
         }
+    }
+}
+
+export const ApiManager = {
+    GetCarousel: async () => {
+        await axios({
+            method: "get",
+            url: ""
+        })
     }
 }

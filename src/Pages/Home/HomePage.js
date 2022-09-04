@@ -17,13 +17,7 @@ import "./homepage.scss";
 import Slide_Partners from '../../Components/Slide_Partners/Slide_Partners';
 
 function HomePage(props) {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
+  
 
     return (
         <div className='home innhanh_fade'>
@@ -254,32 +248,6 @@ function HomePage(props) {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className='feeback text-center'>
-                <div className='innhanh_title mb-xl-4 mb-sm-2 mt-xl-4 mt-sm-2'>
-                    <h3>Đánh Giá Của <span>KHÁCH HÀNG</span></h3>
-                </div>
-                <Slider {...settings}>
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left mr-5"></i>
-                            Công Ty chúng tôi đặt in name card tại đây, chất lượng in sáng đẹp, giấy tốt. Sếp khá ưng ý. Chúc công ty làm tốt.
-                            <i class="fa fa-quote-right ml-5"></i>
-                        </p>
-                        <h5>Nam An</h5>
-                        <p>Công Ty Phú Quý Gia</p>
-                    </div>
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left mr-3"></i>
-                            Tôi in tại Trung Tâm In Nhanh được 5 năm , giá tuy không rẻ nhất, nhưng chất lượng bài in đẹp, luôn đúng hẹn. Dịch vụ tốt!
-                            <i class="fa fa-quote-right ml-3"></i>
-                        </p>
-                        <h5>Tuấn Nguyễn</h5>
-                        <p>Thiết Kế Mô Hình</p>
-                    </div>
-                </Slider>
             </div>
 
             <div className='innhanh_title text-center mt-3'>

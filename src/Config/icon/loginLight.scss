@@ -1,0 +1,20 @@
+#logo_light {
+    width: 30vw;
+    height: 50vh;
+    margin: 0 auto;
+    #light2,
+    #light1 {
+        transform: translateX(0);
+        animation-name: avc;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        opacity: 1;
+    }
+}
+@keyframes avc {
+    to {
+        transform: translateX(125%);
+        opacity: 0;
+    }
+}
+

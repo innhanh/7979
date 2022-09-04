@@ -1,3 +1,4 @@
+@import "../../style/valiable";
 #myCarousel {
     .carousel-indicators {
         li {
@@ -9,86 +10,51 @@
         .carousel-item {
             .item_1 {
                 position: relative;
-                height: 80vh;
-                .slide_text {
-                    margin-top: 10vh;
+                .item_1_text {
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    &:hover {
-                        h1 {
-                            span {
-                                margin-left: 0;
-                            }
-                        }
-                    }
+                    top: 50%;
+                    left: 9%;
                     h1 {
-                        font-family: Montserrat, sans-serif;
-                        color: #000;
-                        font-size: 8vw;
-                        text-align: center;
-                        font-weight: 400;
-                        margin-bottom: 0;
+                        @include textStyle($color-bg, 2.5rem, 300);
                         span {
-                            margin-left: 4%;
-                            font-weight: 700;
-                            transition: 0.5s;
-                            .in79 {
-                                font-weight: 700;
-                                border-top: 15px solid #ff6101;
+                            @include textStyle($color-bg, 2.5rem, 700);
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .svg-wrapper {
+                        position: relative;
+                        top: 50%;
+                        margin: 0 auto;
+                        width: 320px;
+                        .shape {
+                            stroke-dasharray: 140 540;
+                            stroke-dashoffset: -474;
+                            stroke-width: 8px;
+                            fill: transparent;
+                            stroke: $color-orange;
+                            border-bottom: 5px solid $color-orange;
+                            transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+                        }
+                        &:hover {
+                            .shape {
+                                stroke-width: 2px;
+                                stroke-dashoffset: 0;
+                                stroke-dasharray: 760;
                             }
                         }
-                    }
-                }
-                .slide_text_left {
-                    position: absolute;
-                    bottom: 0;
-                    left: 8vw;
-                    p {
-                        font-size: 2vw;
-                        font-family: "Montserrat", Arial, sans-serif;
-                        font-weight: 700;
-                        line-height: 1.2;
-                        span {
-                            color: #ff6101;
+                        .btn_more {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            transform: translate(-50%, -50%);
+                            @include textStyle ($colordark-300, 1.3rem, 700);
+                            font-style: italic;
                         }
                     }
-                    .slide_text_left_over {
-                        margin-top: 30px;
-                        .over_before {
-                            margin-bottom: 0px;
-                            padding: 0;
-                            background-color: #000;
-                        }
-                        .over_author {
-                            color: #666;
-                            font-size: 18px;
-                            font-weight: 700;
-                            padding-left: 88px;
-                        }
-                    }
-                }
-                .slidetop {
-                    position: absolute;
-                    top: 0;
-                    left: 10%;
-                }
-                .slideback {
-                    z-index: -9999;
-                    position: absolute;
-                    top: 0;
-                    left: 10%;
                 }
             }
         }
     }
-    .carousel-control-prev {
-        color: #ff6101 !important;
-    }
-    .carousel-control-next {
-        color: #ff6101 !important;
-        z-index: 99999;
-    }
+  
 }

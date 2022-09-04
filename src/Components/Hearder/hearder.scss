@@ -1,174 +1,202 @@
 @import "../../style/animation";
+@import "../../style/valiable";
 .hearder {
-    .hearder-top {
-        background-color: #099cf4;
-        .navbar {
-            padding: 6px 0;
-            #nav-top {
-                .hearder-left {
-                    .navbar-nav {
-                        letter-spacing: -0.5px;
-                        .nav-item {
-                            line-height: 24px;
-                            font-size: 12px;
-                            &:hover {
-                                .nav-link {
-                                    i {
-                                        animation-name: move;
-                                        animation-duration: 0.5s;
-                                        animation-iteration-count: infinite;
-                                    }
-                                }
-                            }
-                            .nav-link {
-                                font-weight: 600;
-                                color: #b2dcf4;
-                                i {
-                                    margin-right: 8px;
-                                    font-weight: 900;
-                                    font-size: 10px;
-                                    transition: 0.5s;
-                                }
+    .hearder_Top {
+        background-color: $color-bg;
+        padding: 0;
+        margin: 0;
+        .hearder_Top_nav {
+            .navbar-nav {
+                display: flex;
+                flex-direction: row;
+                .nav-item {
+                    margin: 0 0.4rem;
+                    padding: 0.3rem 0.25rem;
+                    @include textStyle(white, 0.9rem, 500);
+                    &:hover {
+                        .nav-link {
+                            color: rgb(124, 124, 124);
+                            i {
+                                animation-name: move;
+                                animation-duration: 0.5s;
+                                animation-iteration-count: infinite;
                             }
                         }
                     }
-                }
-                .hearder-right {
-                    .navbar-nav {
-                        .nav-item {
-                            &:hover {
-                                .nav-link {
-                                    .facebook {
-                                        background-color: #3b5a9a;
-                                    }
-                                    .youtube {
-                                        background-color: #c3191e;
-                                    }
-                                    .linkin {
-                                        background-color: #0073b2;
-                                    }
-                                }
-                            }
-                            .nav-link {
-                                padding: 0;
-                                margin-right: 5px;
-                                i {
-                                    text-align: center;
-                                    width: 28px;
-                                    height: 28px;
-                                    line-height: 28px;
-                                    border-radius: 50%;
-                                    font-size: 0.83rem;
-                                    color: white;
-                                    background-color: transparent;
-                                    transition: 1s;
-                                }
+                    .nav-link {
+                        color: white;
+                        transition: 0.5s;
+                        i {
+                            @include textStyle(white, 0.75rem, bold);
+                            margin-right: 0.4rem;
+                        }
+                    }
+                    .hotline {
+                        @include textStyle(white, 1.7rem, 500);
+                        margin-right: 2rem;
+                        i {
+                            @include textStyle(white, 1.7rem, bold);
+                            transform: rotate(-30deg);
+                            margin-right: 1rem;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background-color: rgb(207, 23, 23);
+                            line-height: 50px;
+                            text-align: center;
+
+                            padding: 0;
+                            animation-name: rotate;
+                            animation-duration: 0.5s;
+                            animation-iteration-count: infinite;
+                            position: relative;
+                            z-index: 9999999 !important;
+                            &::after {
+                                content: "";
+                                width: 50px;
+                                height: 50px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                border-radius: 50%;
+                                display: block;
+                                border: 1px solid rebeccapurple;
+                                // background-color: rgb(255, 68, 0);
+                                animation-name: border;
+                                animation-duration: 0.5s;
+                                animation-iteration-count: infinite;
+                                transition: 0.5s;
+                                opacity: 0;
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-    .hearder-center {
-        .navbar {
-            #nav-center {
-                padding: 10px 0;
-                .timeworlk {
-                    i {
-                        color: #099cf4;
-                        font-size: 2em;
-                    }
-                    .time_worlk_item {
+                    .btn_theme {
+                        color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        padding: 0.3rem 0.2rem;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        cursor: pointer;
                         p {
-                            line-height: 1.5;
-                            font-size: 0.78rem;
-                            font-weight: 600;
-                            letter-spacing: 0;
-                            color: #999;
-                            text-align: left;
-                            margin: 0 0 1.25rem;
+                            margin: 0 0.3rem;
+                            padding: 0;
                         }
-                    }
-                }
-                .logo {
-                    padding: 0;
-                    width: 7vw;
-                    text-align: center;
-                }
-                .hotline {
-                    p {
-                        line-height: 1.5;
-                        font-size: 0.78rem;
-                        font-weight: 600;
-                        letter-spacing: 0;
-                        color: #999;
-                        text-align: left;
-                        margin-bottom: 0;
-                    }
-                    i {
-                        color: #099cf4;
-                        font-size: 2em;
-                        margin-left: 15px;
+                        .cicrle {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            margin: 0 0.3rem;
+                        }
                     }
                 }
             }
         }
     }
-    .hearder-bottom {
-        transition: 1.5s;
+    .hearder_Main {
+        transition: 0.5s;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         .navbar {
-            .navbar-toggler {
-                margin-top: 10px;
-                margin-left: auto;
-                color: #fff;
-                background-color: #099cf4;
-                margin-right: 0.5rem;
-                border: none;
-                i {
-                    text-align: center;
-                    font-size: 13px;
-                    line-height: 20px;
-                    color: white;
+            .logo {
+                padding: 0 2rem;
+                margin-left: 3rem;
+                margin-right: 0;
+                img {
+                    width: 80px;
                 }
             }
-            #navbarText {
+            .btn_responsive {
+            }
+            #hearder_Main_Nav {
+                justify-content: center;
+                .navbar-nav {
+                    .nav-item {
+                        margin: 0 1rem;
+                        .nav-link {
+                            @include textStyle(rgb(64, 64, 64), 1rem, 600);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .scroll-to-top {
+        position: fixed;
+        width: 100%;
+        background-color: $color-bg;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        .navbar {
+            #hearder_Main_Nav {
                 .navbar-nav {
                     .nav-item {
                         .nav-link {
-                            font-family: Open Sans, sans-serif;
-                            font-size: 13px;
-                            font-weight: 700;
-                            line-height: 20px;
-                            letter-spacing: -0.5px;
-                            padding: 15px 10px 0 10px;
-                            margin: 0 10px;
-                            color: #444;
-                            margin-bottom: 5px;
-                        }
-
-                        .listMenu {
-                            padding-top: 5px;
-                            border-top: 3px solid #0073b2;
-                            position: absolute;
-                            background-color: white;
-                            border-bottom-left-radius: 10px;
-                            border-bottom-right-radius: 10px;
-                            box-shadow: 3px 3px 10px #888888;
-                            z-index: 9999;
-                            .dropdown-item {
-                                color: #777;
-                                font-size: 13px;
-                                font-weight: 400;
-                                line-height: 20px;
-                                letter-spacing: -0.5px;
-                            }
+                            color: #fff;
                         }
                     }
                 }
             }
         }
     }
+    .backToTop {
+        transition: 1s;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        background-color: $color-red;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        border: none;
+        top: 50%;
+        transform: translateX(120%);
+        opacity: 0;
+        right: 1vw;
+        z-index: 999999;
+        &:hover {
+            i {
+                transform: translateY(5%);
+            }
+        }
+        i {
+            @include textStyle(white, 1.5rem, bold);
+        }
+    }
+    .btnShow {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
-
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes border {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        border: 1px solid rgb(190, 19, 16);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        border: 10px solid rgb(246, 101, 87);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        border: 1px solid rgb(190, 19, 16);
+        opacity: 0;
+    }
+}

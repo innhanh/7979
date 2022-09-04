@@ -1,34 +1,22 @@
 @import "./style/animation";
+@import "./style//valiable";
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: UTMAvo;
   scroll-behavior: smooth;
-
-  .scroll-to-top {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-
-    position: fixed;
-    z-index: 99;
-    text-align: center;
-    transition: all 0.4s ease;
-    display: none;
-    border-radius: 50%;
-    bottom: 2vh;
-    right: 2vh;
-  }
 }
 
 .show {
   display: block;
+  opacity: 1;
 }
 .hide {
   display: none;
+  opacity: 0;
 }
 .tags_item {
   font-size: 13px;
@@ -60,34 +48,7 @@ html {
     }
   }
 }
-.innhanh_title {
-  h3 {
-    font-size: 2rem;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    span {
-      font-size: 2.5rem;
-      color: #099cf4;
-    }
-  }
-}
-.innhanh-container {
-  width: 85%;
-  margin: 0 auto;
-}
-.text-bold {
-  font-weight: 700;
-}
-.text-italic {
-  font-style: italic;
-}
-.text-bold-italic {
-  font-style: oblique;
-}
-.text-color-green {
-  color: #099cf4;
-}
+
 .produc_image {
   margin: 1rem 0;
   img {
@@ -152,13 +113,28 @@ html {
 .bg-black {
   background-color: #212529;
 }
-
-.image_animation {
-  animation-name: imageScale;
-  animation-duration: 1s;
-}
-.innhanh_fade {
-  animation-name: appear;
-  animation-duration: 1.5s;
+.bg-blue-dark {
+  background-color: $color-bg;
 }
 
+// With
+.innhanh_90 {
+  width: 90%;
+  margin: 0 auto;
+}
+.innhanh_80 {
+  width: 80%;
+  margin: 0 auto;
+}
+.innhanh_70 {
+  width: 70%;
+  margin: 0 auto;
+}
+.innhanh_60 {
+  width: 60%;
+  margin: 0 auto;
+}
+.innhanh_50 {
+  width: 50%;
+  margin: 0 auto;
+}

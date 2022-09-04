@@ -1,0 +1,17 @@
+@import "../style/valiable";
+.dark {
+    #root {
+        background-color: $colordark-300;
+        .App {
+            .hearder {
+                .hearder_Top {
+                    background-color: $colordark-100;
+                }
+                .hearder_Main{
+                    background-color: $colordark-100;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,9 @@
-$colordark-100: #101b33;
-$colordark-200: #171e2a;
-$colordark-300: #495057;
+$colordark-100: #000000;
+$colordark-200: #181818;
+$colordark-300: #535353;
+$color-bg: rgb(4, 4, 77);
+$color-red: rgb(184, 5, 5);
+$color-orange: rgb(240, 67, 4);
 
 $color-yellow: #f7b924;
 
@@ -41,4 +44,9 @@ $translateValue: -$paddingSize - $borderWidth;
 }
 
 // Animation
+// font
 
+@font-face {
+    font-family: UTMAvo;
+    src: url("../font/UTM\ Avo.ttf");
+}

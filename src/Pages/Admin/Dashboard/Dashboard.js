@@ -18,7 +18,7 @@ function Dashboard(props) {
     const [menuShow, setMenuShow] = useState("");
 
     const admin = useSelector(Selector.Admin.SelectorAdmin);
-
+    
 
     const handleShow = (id) => {
         const element = window.document.getElementById(id);
@@ -39,7 +39,7 @@ function Dashboard(props) {
                         <div class="avatar">
                             <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="rounded-circle"
                                 alt="Avatar" />
-                            <h5 class="mb-2 mt-2"><strong>Huỳnh Sang</strong></h5>
+                            <h5 class="mb-2 mt-2"><strong>{admin.userName}</strong></h5>
                             <p class="text-muted">Web designer <span class="badge bg-primary">PRO</span></p>
                         </div>
                     </div>
