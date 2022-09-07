@@ -61,55 +61,6 @@ html {
   }
 }
 
-.scr_bar {
-  position: fixed;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px #888888;
-  width: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999999;
-}
-.ScrollToTop {
-  position: fixed;
-  background-color: #099cf4;
-  border: none;
-  box-shadow: 5px 5px 5px #888888;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  bottom: 48vh;
-  right: 2vh;
-  z-index: 999999;
-  text-align: center;
-  transition: 0.5s;
-  i {
-    z-index: 999;
-    color: rgb(255, 255, 255);
-  }
-  &::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: block;
-    background-color: #099cf4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    z-index: -1;
-  }
-  &:hover {
-    &::after {
-      animation-name: ScrollToTop;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-  }
-}
-
 .bg-black {
   background-color: #212529;
 }
@@ -137,4 +88,56 @@ html {
 .innhanh_50 {
   width: 50%;
   margin: 0 auto;
+}
+.innhanh_40 {
+  width: 40%;
+  margin: 0 auto;
+}
+.innhanh_30 {
+  width: 30%;
+  margin: 0 auto;
+}
+.innhanh_20 {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.innhanh_10 {
+  width: 10%;
+  margin: 0 auto;
+}
+.innhanh_5 {
+  width: 5%;
+  margin: 0 auto;
+}
+.innhanh_title {
+  h3 {
+    @include textStyle($color-bg, 2rem, 400);
+    font-style: italic;
+    margin-right: 0.5rem;
+    span {
+      @include textStyle($color-bg, 2.5rem, 700);
+      font-family: UTMAvoBold;
+      font-style: normal;
+      text-align: center;
+
+      background: linear-gradient(to left, #099cf4 20%, $color-bg 40%, $color-bg 60%, #099cf4 80%);
+      background-size: 200% auto;
+
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: ChangeColor 3s linear infinite;
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes ChangeColor {
+  to {
+    background-position: 200% center;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./hearder.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../Access/Image/logo.png";
 
 
@@ -22,10 +22,8 @@ const innhanh = [
 
 
 function Hearder(props) {
-    const [light, setLight] = useState(true);
-    // const [menu, setMenu] = useState("");
-    const [scrollY, setScrollY] = useState();
-    // const { pathname } = useLocation();
+    const [light, setLight] = useState(true);   
+    const [scrollY, setScrollY] = useState();  
 
     useEffect(() => {
         const handleScroll = () => {
@@ -118,7 +116,7 @@ function Hearder(props) {
                             <li className='nav-item'>
                                 <Link className='nav-link hotline' to={"#"}>
                                     <i className="fa fa-phone-volume"></i>
-                                    0824.288.079
+                                    0888.229.079
                                 </Link>
                             </li>
                             <li className='nav-item'>

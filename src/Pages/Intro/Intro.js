@@ -4,7 +4,7 @@ import "./intro.scss";
 
 import banner_intro from "../../Access/Image/banner_intro.png";
 import banner_intro2 from "../../Access/Image/banner_intro2.jpg";
-import Slide_Partners from '../../Components/Slide_Partners/Slide_Partners';
+import SlidePartners from '../../Components/SlidePartners/SlidePartners';
 import BackToHome from '../../Components/BackToHome/BackToHome';
 
 function IntroPage(props) {
@@ -15,7 +15,7 @@ function IntroPage(props) {
           currentPage={"Giới Thiệu"}
           />
             <div className='intro_banner container'>
-                <img className='img-fluid w-100 mt-3 mb-5' src={banner_intro} />
+                <img className='img-fluid w-100 mt-3 mb-5' src={banner_intro} alt='banner_intro'/>
             </div>
 
             <div className='intro_About'>
@@ -65,7 +65,7 @@ function IntroPage(props) {
                     </div>
                     <div className='row'>
                         <div className='col-4'>
-                            <img className='img-fluid w-100' src={banner_intro2} />
+                            <img className='img-fluid w-100' src={banner_intro2} alt='banner_intro2' />
                         </div>
                         <div className='col-8'>
                             <div className=''>
@@ -92,7 +92,7 @@ function IntroPage(props) {
                         <p>Khách hàng của <Link to={"/"}>InNhanh79</Link> là các công ty, tập đoàn từ Nhật Bản, Hàn Quốc, Thái Lan, Singapore, Việt Nam… Các cá nhân, các nhóm kinh doanh từ online, shop nhỏ cho đến người tiêu dùng cuối. Với mong muốn thông qua marketing online chúng tôi kỳ vọng mở rộng đối tượng khách hàng dùng cuối ra khắp các tỉnh thành Việt Nam, và các đối tác mới trong khu vực.</p>
                     </div>
                     <div className='intro_Partner_main'>
-                        <Slide_Partners />
+                        <SlidePartners />
                     </div>
                 </div>
             </div>

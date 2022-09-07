@@ -1,15 +1,19 @@
-.home {
+@import "../../style/valiable";
+#homePage {
     .intro {
         margin-top: 50px;
         .intro_text {
             p {
-                color: #777;
-                font-size: 15px;
+                color: $colordark-300;
+                font-size: $fs16 + 2;
                 a {
-                    font-size: 16px;
-                    margin-right: 8px;
-                    font-weight: 500;
+                    @include textStyle($color-blue-700, $fs20, $fwb);
+                    margin-right: $mg-10 - 2;
                     text-decoration: none;
+                    transition: 0.5s;
+                    &:hover {
+                        color: $color-bg;
+                    }
                 }
             }
         }
@@ -26,30 +30,28 @@
         }
     }
     .productions {
-        background-color: #f4f4f4;
-        margin-top: 50px;
-        padding: 35px 0;
+        background-color: $colordark-700;
+        margin-top: $mg-50;
+        padding: $pd-30 + 5 0;
 
         .productions_item {
             .productions_hearder {
-                margin-bottom: 1rem;
+                margin-bottom: $mg-20;
+                h4 {
+                    @include textStyle($color-bg, $fs30, 700);
+                }
                 &::after {
                     content: "";
-                    width: 100%;
-                    background-color: #090763;
-                    height: 2px;
+                    width: 50%;
+                    background-color: $color-bg-200;
+                    height: 3px;
                     display: block;
                     transition: 0.5s;
                 }
-                i {
-                    font-size: 2rem;
-                    color: #099cf4;
-                    margin-bottom: 10px;
-                }
+              
                 h4 {
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    letter-spacing: -1px;
+                    font-size: $fs30;
+                    font-weight: $fwb;
                     cursor: pointer;
                     transition: 0.5s;
                 }
@@ -64,9 +66,8 @@
             .productions_main {
                 .productions_main-link {
                     li {
+                        @include textStyle(#777, $fs20 - 3, 400);
                         text-decoration: none;
-                        color: #777;
-                        font-size: 0.87rem;
                         margin-bottom: 0.3rem;
                     }
                 }

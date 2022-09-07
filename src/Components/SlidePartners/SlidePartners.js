@@ -14,7 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Slide_Partners(props) {
+function SlidePartners(props) {
 
     const settingsPartners = {
         className: "center",
@@ -86,4 +86,4 @@ function Slide_Partners(props) {
     );
 }
 
-export default Slide_Partners;
+export default SlidePartners;

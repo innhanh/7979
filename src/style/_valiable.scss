@@ -1,18 +1,38 @@
+//Color
 $colordark-100: #000000;
 $colordark-200: #181818;
 $colordark-300: #535353;
+$colordark-700: #f4f4f4;
 $color-bg: rgb(4, 4, 77);
+$color-bg-100: rgb(7, 7, 56);
+$color-bg-200: #090763;
 $color-red: rgb(184, 5, 5);
 $color-orange: rgb(240, 67, 4);
-
+$color-blue-700: #099cf4;
 $color-yellow: #f7b924;
 
+//Padding
+$pd-10: 10px;
+$pd-20: 20px;
+$pd-30: 30px;
+$pd-40: 40px;
+$pd-50: 50px;
+
+//Margin
+$mg-10: 10px;
+$mg-20: 20px;
+$mg-30: 30px;
+$mg-40: 40px;
+$mg-50: 50px;
+
+//Font-size
 $fs16: 16px;
 $fs20: 20px;
 $fs30: 30px;
 $fs40: 406px;
 $fs50: 50px;
 
+//Font-weight
 $fw: normal;
 $fwb: bold;
 
@@ -49,4 +69,9 @@ $translateValue: -$paddingSize - $borderWidth;
 @font-face {
     font-family: UTMAvo;
     src: url("../font/UTM\ Avo.ttf");
+}
+
+@font-face {
+    font-family: UTMAvoBold;
+    src: url("../font/UTM\ AvoBold.ttf");
 }

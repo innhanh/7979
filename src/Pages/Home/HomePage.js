@@ -9,18 +9,20 @@ import menuPrint2 from "../../Access/Image/menuPrint2.jpg";
 import menuPrint3 from "../../Access/Image/menuPrint3.jpg";
 import menuPrint4 from "../../Access/Image/menuPrint4.jpg";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import "./homepage.scss";
-import Slide_Partners from '../../Components/Slide_Partners/Slide_Partners';
+import SlidePartners from '../../Components/SlidePartners/SlidePartners';
+
+import NameCard from '../../Config/icon/NameCard';
+import Bill from '../../Config/icon/Bill';
+import TickerIcon from '../../Config/icon/TickerIcon';
+import EvenlopeIcon from '../../Config/icon/EvenlopeIcon';
+import FlyerIcon from '../../Config/icon/FlyerIcon';
 
 function HomePage(props) {
-  
 
     return (
-        <div className='home innhanh_fade'>
+        <div className='innhanh_fade' id='homePage'>
             <Carousel />
             <div className='intro'>
                 <div className='container'>
@@ -65,8 +67,8 @@ function HomePage(props) {
                     <div className='row'>
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fa fa-envelope-open"></i>
+                                <div className='productions_hearder d-flex justify-content-center align-items-center'>
+                                    <EvenlopeIcon />
                                     <h4>IN BAO THƯ</h4>
                                 </div>
                                 <div className='productions_main'>
@@ -82,7 +84,7 @@ function HomePage(props) {
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
                                 <div className='productions_hearder'>
-                                    <i class="fa fa-layer-group"></i>
+                                    <NameCard />
                                     <h4>IN NAME CARD</h4>
                                 </div>
                                 <div className='productions_main'>
@@ -98,13 +100,13 @@ function HomePage(props) {
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
                                 <div className='productions_hearder'>
-                                    <i class="fa fa-file"></i>
+                                    <FlyerIcon />
                                     <h4>IN TỜ RƠI</h4>
                                 </div>
                                 <div className='productions_main'>
                                     <ul className='productions_main-link'>
                                         <li>Kích Thước: A5, A4, A3, SRA3, 13×19</li>
-                                        <li>Định Lượng: 120gsm – 350 gsm</li>
+                                        <li>Định Lượng: 120gsm - 350 gsm</li>
                                         <li>Loại Giấy: Fort, Couche, Mỹ Thuật</li>
                                         <li>In Nhanh, In Offset</li>
                                     </ul>
@@ -194,7 +196,7 @@ function HomePage(props) {
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
                                 <div className='productions_hearder'>
-                                    <i class="fa fa-torah"></i>
+                                    <TickerIcon />
                                     <h4>IN TEM DECAL, STICKER</h4>
                                 </div>
                                 <div className='productions_main'>
@@ -253,7 +255,7 @@ function HomePage(props) {
             <div className='innhanh_title text-center mt-3'>
                 <h3>Đối Tác <span>INNHANH79</span></h3>
             </div>
-            <Slide_Partners />
+            <SlidePartners />
 
 
         </div>

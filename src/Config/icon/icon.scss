@@ -1,0 +1,16 @@
+#Layer_1 {
+    width: 15%;
+    margin-bottom: 1rem;
+    circle {
+        
+    }
+}
+
+@keyframes circleRotate {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 1000;
+    }  
+}

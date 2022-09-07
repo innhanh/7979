@@ -1,9 +1,35 @@
 @import "../../style/valiable";
 #myCarousel {
+    // background-color: white;
+    padding: 2rem 0;
+    position: relative;
     .carousel-indicators {
         li {
             color: #ff6101 !important;
             z-index: 99999;
+        }
+    }
+    #btn_PreviousCarousel {
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        top: 50%;
+        left: 1.2vw;
+        border-radius: 8px;
+        background-color: $colordark-300;
+    }
+    #btn_NextCarousel {
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        top: 50%;
+        right: 1.2vw;
+        border-radius: 8px;
+        background-color: $colordark-300;
+    }
+    #btn_indicators {
+        li {
+            background-color: #ff6101;
         }
     }
     .carousel-inner {
@@ -14,47 +40,79 @@
                     position: absolute;
                     top: 50%;
                     left: 9%;
-                    h1 {
+                    .text_inBanVe {
                         @include textStyle($color-bg, 2.5rem, 300);
+                        transform: translateX(-100%);
+                        animation-name: LeftToRight;
+                        animation-duration: 3s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 8s;
                         span {
+                            font-family: UTMAvoBold;
                             @include textStyle($color-bg, 2.5rem, 700);
                             letter-spacing: 1px;
                         }
                     }
-                    .svg-wrapper {
-                        position: relative;
-                        top: 50%;
-                        margin: 0 auto;
-                        width: 320px;
-                        .shape {
-                            stroke-dasharray: 140 540;
-                            stroke-dashoffset: -474;
-                            stroke-width: 8px;
-                            fill: transparent;
-                            stroke: $color-orange;
-                            border-bottom: 5px solid $color-orange;
-                            transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+                    .text_inQuangCao {
+                        @include textStyle($color-bg, 2.5rem, 300);
+                        transform: translateX(-140%);
+                        animation-name: LeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 8.5s;
+                        span {
+                            font-family: UTMAvoBold;
+                            @include textStyle($color-bg, 2.5rem, 700);
+                            letter-spacing: 1px;
                         }
-                        &:hover {
-                            .shape {
-                                stroke-width: 2px;
-                                stroke-dashoffset: 0;
-                                stroke-dasharray: 760;
+                    }
+                    .text_innhanh {
+                        @include textStyle($color-orange, 2.5rem, 300);
+                        transform: translateX(-130%);
+                        animation-name: LeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 8.5s;
+                        span {
+                            font-family: UTMAvoBold;
+                            @include textStyle($color-orange, 2.5rem, 300);
+                            span {
+                                font-family: UTMAvo;
+                                @include textStyle($color-bg, 2.5rem, 300);
                             }
                         }
-                        .btn_more {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            width: 100%;
-                            transform: translate(-50%, -50%);
-                            @include textStyle ($colordark-300, 1.3rem, 700);
-                            font-style: italic;
+                    }
+                    .btn_more {
+                        background-color: $color-bg;
+                        color: white;
+                        padding: 0.5rem 2rem;
+                        max-width: 50%;
+                        margin: 1rem 0;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                        transition: 0.5s;
+                        transform: translateX(-180%);
+                        animation-name: LeftToRight;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 9s;
+                        &:hover {
+                            background-color: white;
+                            border: 2px solid $color-bg;
+                            color: $color-bg;
                         }
+                    }
+                }
+
+                @keyframes LeftToRight {
+                    to {
+                        transform: translateX(0);
                     }
                 }
             }
         }
     }
-  
 }
