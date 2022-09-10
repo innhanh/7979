@@ -34,6 +34,9 @@
     }
     .carousel-inner {
         .carousel-item {
+            background-color: white;
+            padding: $pd-30;
+            border-radius: 8px;
             .item_1 {
                 position: relative;
                 .item_1_text {
@@ -93,7 +96,7 @@
                         margin: 1rem 0;
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
                         transition: 0.5s;
-                        transform: translateX(-180%);
+                        transform: translateX(-190%);
                         animation-name: LeftToRight;
                         animation-duration: 1.5s;
                         animation-iteration-count: 1;

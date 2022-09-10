@@ -18,7 +18,9 @@ import Bill from '../../Config/icon/Bill';
 import TickerIcon from '../../Config/icon/TickerIcon';
 import EvenlopeIcon from '../../Config/icon/EvenlopeIcon';
 import FlyerIcon from '../../Config/icon/FlyerIcon';
+import SlideShow from '../../Components/SlideShow/SlideShow';
 
+const ArrImage = [image1, image2, image3];
 function HomePage(props) {
 
     return (
@@ -41,15 +43,11 @@ function HomePage(props) {
                         <div className='col-xl-5 col-md-12'>
                             <div className='container'>
                                 <div className='row'>
-                                    <div className='col-6 intro_image'>
-                                        <img src={image1} className='img-fluid image_animation' alt='image1' />
-
-                                    </div>
                                     <div className='col-6'>
-                                        <div className='image2'>
-                                            <img src={image2} className='img-fluid image_animation mb-4' alt='image2' />
-                                            <img src={image3} className='img-fluid image_animation' alt='image3' />
-                                        </div>
+                                        <SlideShow
+                                            ArrImage={ArrImage}
+                                        />
+
                                     </div>
                                 </div>
                             </div>
@@ -67,8 +65,11 @@ function HomePage(props) {
                     <div className='row'>
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
-                                <div className='productions_hearder d-flex justify-content-center align-items-center'>
-                                    <EvenlopeIcon />
+                                <div className='productions_hearder'>
+                                    <div className='produc_icon'>
+                                        <EvenlopeIcon />
+                                    </div>
+
                                     <h4>IN BAO THƯ</h4>
                                 </div>
                                 <div className='productions_main'>
@@ -84,7 +85,10 @@ function HomePage(props) {
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
                                 <div className='productions_hearder'>
-                                    <NameCard />
+                                    <div className='produc_icon'>
+                                        <NameCard />
+                                    </div>
+
                                     <h4>IN NAME CARD</h4>
                                 </div>
                                 <div className='productions_main'>
@@ -100,7 +104,9 @@ function HomePage(props) {
                         <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
                             <div className='productions_item'>
                                 <div className='productions_hearder'>
-                                    <FlyerIcon />
+                                    <div className='produc_icon'>
+                                        <FlyerIcon />
+                                    </div>
                                     <h4>IN TỜ RƠI</h4>
                                 </div>
                                 <div className='productions_main'>

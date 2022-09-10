@@ -1,8 +1,6 @@
 #Layer_1 {
-    width: 15%;
-    margin-bottom: 1rem;
+    width: 100%;
     circle {
-        
     }
 }
 
@@ -12,5 +10,5 @@
     }
     to {
         stroke-dashoffset: 1000;
-    }  
+    }
 }

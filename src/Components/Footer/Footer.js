@@ -47,7 +47,7 @@ function Footer(props) {
                                     <p className='d-flex justify-content-start align-items-center'>
                                         <div>  <i className="fa fa-map-marker-alt"></i></div>
 
-                                        <span>43D/10 Hồ Văn Huê - P.9 - Q.Phú Nhuận - TP.HCM.</span>
+                                        <span>43D/10 Hồ Văn Huê - P.9 - <br />Q.Phú Nhuận - TP.HCM.</span>
                                     </p>
                                     <p>
                                         <i className="fa fa-phone"></i>
@@ -80,7 +80,7 @@ function Footer(props) {
                                     <p className='d-flex justify-content-start align-items-center'>
                                         <div>  <i className="fa fa-map-marker-alt"></i></div>
 
-                                        <span>29 Bis Nguyễn Đình Chiểu - P.Đa Kao - Q.1 - TP.HCM.</span>
+                                        <span>29 Bis Nguyễn Đình Chiểu - <br />P.Đa Kao - Q.1 - TP.HCM.</span>
                                     </p>
                                     <p>
                                         <i className="fa fa-phone"></i>
@@ -91,7 +91,7 @@ function Footer(props) {
                                     <p>
                                         <i className="fa fa-envelope"></i>
                                         <span>
-                                            <Link to={"#"}>innhanh7979@gmail.com</Link>
+                                            <Link to={"#"}>ingiatot2015@gmail.com</Link>
                                         </span>
                                     </p>
                                     <p>
