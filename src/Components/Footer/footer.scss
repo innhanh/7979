@@ -33,21 +33,21 @@
                 p {
                     text-align: left;
                     i {
-                        @include textStyle(white, 1.4rem, bold);
-                        width: 3vw;
-                        height: 3vw;
+                        @include textStyle(white, 1.4em, bold);
+                        width: 2.5rem;
+                        height: 2.5rem;
                         border-radius: 50%;
                         text-align: center;
-                        line-height: 3vw;
+                        line-height: 2.5rem;
                         border: 1px solid white;
                         margin-right: 1rem;
                     }
                     .icon_zalo {
-                        width: 3vw;
-                        height: 3vw;
+                        width: 2.5rem;
+                        height: 2.5rem;
                         border-radius: 50%;
                         border: 1px solid white;
-                        line-height: 2.35vw;
+                        line-height:1.9rem;
                         text-align: center;
                         display: inline-block;
                         margin-right: 1rem;

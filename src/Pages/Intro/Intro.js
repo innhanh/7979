@@ -5,24 +5,21 @@ import "./intro.scss";
 import banner_intro from "../../Access/Image/banner_intro.png";
 import banner_intro2 from "../../Access/Image/banner_intro2.jpg";
 import SlidePartners from '../../Components/SlidePartners/SlidePartners';
-import BackToHome from '../../Components/BackToHome/BackToHome';
+
 
 function IntroPage(props) {
 
     return (
-        <div className='introPage innhanh_fade'>
-          <BackToHome
-          currentPage={"Giới Thiệu"}
-          />
+        <div className='introPage innhanh_fade'>        
             <div className='intro_banner container'>
-                <img className='img-fluid w-100 mt-3 mb-5' src={banner_intro} alt='banner_intro'/>
+                <img className='img-fluid w-100 mt-3 mb-5' src={banner_intro} alt='banner_intro' />
             </div>
 
             <div className='intro_About'>
                 <div className='container'>
                     <div className='innhanh_title'>
-                        <h3 className='mb-3'>Về <span>CHÚNG TÔI</span></h3>
-                    </div>
+                        <h3>Về <span>INNHANH79</span></h3>
+                    </div>                  
                     <div className='intro_About-container'>
                         <div className='intro_About-content d-flex justify-content-between'>
                             <div className='intro_About_item mr-4'>

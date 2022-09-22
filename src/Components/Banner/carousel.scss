@@ -1,121 +1,133 @@
 @import "../../style/valiable";
+
 #myCarousel {
     // background-color: white;
     padding: 2rem 0;
     position: relative;
-    .carousel-indicators {
-        li {
-            color: #ff6101 !important;
-            z-index: 99999;
-        }
-    }
-    #btn_PreviousCarousel {
-        position: absolute;
-        width: 4vw;
-        height: 4vw;
-        top: 50%;
-        left: 1.2vw;
-        border-radius: 8px;
-        background-color: $colordark-300;
-    }
-    #btn_NextCarousel {
-        position: absolute;
-        width: 4vw;
-        height: 4vw;
-        top: 50%;
-        right: 1.2vw;
-        border-radius: 8px;
-        background-color: $colordark-300;
-    }
-    #btn_indicators {
-        li {
-            background-color: #ff6101;
-        }
-    }
-    .carousel-inner {
-        .carousel-item {
-            background-color: white;
-            padding: $pd-30;
-            border-radius: 8px;
-            .item_1 {
-                position: relative;
-                .item_1_text {
-                    position: absolute;
-                    top: 50%;
-                    left: 9%;
-                    .text_inBanVe {
-                        @include textStyle($color-bg, 2.5rem, 300);
-                        transform: translateX(-100%);
-                        animation-name: LeftToRight;
-                        animation-duration: 3s;
-                        animation-iteration-count: 1;
-                        animation-fill-mode: forwards;
-                        animation-delay: 8s;
-                        span {
-                            font-family: UTMAvoBold;
-                            @include textStyle($color-bg, 2.5rem, 700);
-                            letter-spacing: 1px;
-                        }
-                    }
-                    .text_inQuangCao {
-                        @include textStyle($color-bg, 2.5rem, 300);
-                        transform: translateX(-140%);
-                        animation-name: LeftToRight;
-                        animation-duration: 2s;
-                        animation-iteration-count: 1;
-                        animation-fill-mode: forwards;
-                        animation-delay: 8.5s;
-                        span {
-                            font-family: UTMAvoBold;
-                            @include textStyle($color-bg, 2.5rem, 700);
-                            letter-spacing: 1px;
-                        }
-                    }
-                    .text_innhanh {
-                        @include textStyle($color-orange, 2.5rem, 300);
-                        transform: translateX(-130%);
-                        animation-name: LeftToRight;
-                        animation-duration: 2s;
-                        animation-iteration-count: 1;
-                        animation-fill-mode: forwards;
-                        animation-delay: 8.5s;
-                        span {
-                            font-family: UTMAvoBold;
-                            @include textStyle($color-orange, 2.5rem, 300);
-                            span {
-                                font-family: UTMAvo;
-                                @include textStyle($color-bg, 2.5rem, 300);
-                            }
-                        }
-                    }
-                    .btn_more {
-                        background-color: $color-bg;
-                        color: white;
-                        padding: 0.5rem 2rem;
-                        max-width: 50%;
-                        margin: 1rem 0;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-                        transition: 0.5s;
-                        transform: translateX(-190%);
-                        animation-name: LeftToRight;
-                        animation-duration: 1.5s;
-                        animation-iteration-count: 1;
-                        animation-fill-mode: forwards;
-                        animation-delay: 9s;
-                        &:hover {
-                            background-color: white;
-                            border: 2px solid $color-bg;
-                            color: $color-bg;
-                        }
-                    }
-                }
 
-                @keyframes LeftToRight {
-                    to {
-                        transform: translateX(0);
-                    }
+    #innhanhCarousel {
+        .carousel-indicators {
+            bottom: -5vh !important;
+
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-blue-700;
+                position: relative;
+                margin: 0 8px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    line-height: 18px;
+                    border: 1px solid $color-bg;
+                    display: block;
+                    border-radius: 50%;
+                    text-align: center;
+
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
         }
+
+        .carousel-inner {
+            border-radius: 20px;
+            overflow: hidden;
+
+            .carousel-item {
+                img {
+                    position: relative;
+                }
+
+                .btn_readmore {
+                    position: absolute;
+                    bottom: 17%;
+                    left: 8%;
+
+                    a {
+                        margin-top: $mg-10;
+                        font-size: 0.8vw;
+                        width: 100%;
+                        white-space: nowrap;
+                        padding: 0;
+                        padding: $pd-10;
+                        background-color: transparent;
+                        border: 1px solid white;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        color: white;
+                        border-radius: 7px;
+                        transition: 0.5s;
+                      &:hover{
+                        background-color: $color-bg;
+                        a{
+                            color: white;
+                        }
+                      }
+                    }
+                }
+            }
+            .item2{
+                .btn_readmore {                 
+                    bottom: 10%;             
+                }
+            }
+            .item3{
+                .btn_readmore {                 
+                    bottom: 10%; 
+                    left: 20%;   
+                       
+                }
+            }
+            .item4, .item5{
+                .btn_readmore {                 
+                    bottom: 10%; 
+                    left: 60%;   
+                    &:hover{
+                        a{
+                            background-color: white!important;
+                            color: black;
+                        }
+                    }                       
+                }
+                a{
+                    background-color: rgb(0, 0, 0)!important;
+                }
+            }
+            .item6{
+                .btn_readmore {                 
+                    bottom: 10%; 
+                    left: 50%;   
+                       
+                }
+            }
+            
+        }
+
+        #btn_PreviousCarousel {
+            position: absolute;
+            width: 2vw;
+            height: 3vw;
+            top: 50%;
+            left: 2vw;
+            border-radius: 8px;
+            background-color: $colordark-300;
+        }
+
+        #btn_NextCarousel {
+            position: absolute;
+            width: 2vw;
+            height: 3vw;
+            top: 50%;
+            right: 2vw;
+            border-radius: 8px;
+            background-color: $colordark-300;
+        }
+
     }
+
 }

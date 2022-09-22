@@ -8,19 +8,137 @@ import menuPrint1 from "../../Access/Image/menuPrint1.png";
 import menuPrint2 from "../../Access/Image/menuPrint2.jpg";
 import menuPrint3 from "../../Access/Image/menuPrint3.jpg";
 import menuPrint4 from "../../Access/Image/menuPrint4.jpg";
-
+import inbaothu from "../../Access/Image/ProducImage/in-bao-thu.jpg";
+import innamecard from "../../Access/Image/ProducImage/in-name-card.jpg";
+import intoroi from "../../Access/Image/ProducImage/in-to-roi.jpg";
+import inmenu from "../../Access/Image/ProducImage/in-menu.png";
+import incatalogue from "../../Access/Image/ProducImage/in-catalogue-dep.jpg";
+import infolder from "../../Access/Image/ProducImage/in-foler.jpg";
+import inhoadon from "../../Access/Image/ProducImage/in-hoa-don.jpg";
+import inticker from "../../Access/Image/ProducImage/in-decal-ticker.jpg";
 
 import "./homepage.scss";
 import SlidePartners from '../../Components/SlidePartners/SlidePartners';
 
 import NameCard from '../../Config/icon/NameCard';
-import Bill from '../../Config/icon/Bill';
 import TickerIcon from '../../Config/icon/TickerIcon';
 import EvenlopeIcon from '../../Config/icon/EvenlopeIcon';
 import FlyerIcon from '../../Config/icon/FlyerIcon';
 import SlideShow from '../../Components/SlideShow/SlideShow';
+import MenuIcon from '../../Config/icon/MenuIcon';
+import CatalogueIcon from '../../Config/icon/CatalogueIcon';
+import FolderIcon from '../../Config/icon/FolderIcon';
+import BillIcon from '../../Config/icon/BillIcon';
 
 const ArrImage = [image1, image2, image3];
+
+const ProducInNhanh = [
+    {
+        name: "IN BAO THƯ",
+        infor:
+        {
+            size: "12 x 22, 17 x 23, 25 x 35",
+            quantitative: "100gsm - 120 gsm",
+            paper: "Fort",
+            tag: "In Nhanh, In Offset"
+        }
+        ,
+        icon: <EvenlopeIcon />,
+        image: inbaothu
+    },
+    {
+        name: "IN NAMECARD",
+        infor:
+        {
+            size: "5.3 x 8.8, 5.3 x 9, 5.5 x 9.2",
+            quantitative: "250gsm - 350 gsm",
+            paper: "Fort, Couche, Mỹ Thuật",
+            tag: "In Nhanh, In Offset"
+        }
+        ,
+        icon: <NameCard />,
+        image: innamecard
+    },
+    {
+        name: "IN TỜ RƠI",
+        infor:
+        {
+            size: "A5, A4, A3, SRA3, 13x19",
+            quantitative: "120gsm - 350 gsm",
+            paper: "Fort, Couche, Mỹ Thuật",
+            tag: "In Nhanh, In Offset"
+        }
+        ,
+        icon: <FlyerIcon />,
+        image: intoroi
+    },
+    {
+        name: "IN MENU",
+        infor:
+        {
+            size: "A5, A4, A3, SRA3, 13x19",
+            quantitative: "120gsm - 350 gsm",
+            paper: "Couche, Mỹ Thuật, Giấy Nhựa",
+            tag: "In Nhanh, In Offset"
+        }
+        ,
+        icon: <MenuIcon />,
+        image: inmenu
+    },
+    {
+        name: "IN CATALOGUE",
+        infor:
+        {
+            size: "A4 Đứng, A4 Ngang, A5",
+            quantitative: "Bìa, Ruột 150 gsm",
+            paper: "Fort, Couche, Mỹ Thuật",
+            tag: "In Nhanh, In Offset, Bấm Kim, Keo Gáy"
+        }
+        ,
+        icon: <CatalogueIcon />,
+        image: incatalogue
+    },
+    {
+        name: "IN FOLDER",
+        infor:
+        {
+            size: "22x31x7",
+            quantitative: "250 gsm - 300 gsm",
+            paper: "Fort, Couche, Mỹ Thuật",
+            tag: "Màng Bóng, Màng Mờ"
+        }
+        ,
+        icon: <FolderIcon />,
+        image: infolder
+    },
+    {
+        name: "IN HÓA ĐƠN, BIỂU MẪU",
+        infor:
+        {
+            size: "14x20, 20x28",
+            quantitative: "52 gsm - 55 gsm",
+            paper: "Fort, Carbonless",
+            tag: "2, 3, 4 liên, bấm kim, keo gáy"
+        }
+        ,
+        icon: <BillIcon />,
+        image: inhoadon
+    },
+    {
+        name: "IN TEM DECAL, STICKER",
+        infor:
+        {
+            size: "Tùy Chọn",
+            quantitative: "120 gsm",
+            paper: "Decal giấy, Nhựa, Trong , Kraft",
+            tag: "Cắt bế hình dạng theo yêu cầu"
+        }
+        ,
+        icon: <TickerIcon />,
+        image: inticker
+    },
+];
+
 function HomePage(props) {
 
     return (
@@ -38,7 +156,8 @@ function HomePage(props) {
                             <div className='intro_text'>
                                 <p><Link to={"/"}>In Nhanh</Link> là một lĩnh vực đang rất phát triển tại Việt Nam, đặt biệt là các thành phố lớn, thành phố du lịch, khi sự hội nhập đòi hỏi sự chuyên nghiệp và nhanh chóng chính xác cao cùng với đời sống kinh tế ngày càng đi lên thì quan điểm về quảng cáo, khuyến mãi cũng không ngừng thay đổi. Trong đó, xu hướng chung là mọi Khách Hàng ngày càng khắt khe hơn với những ấn phẩm quảng cáo, những thông điệp mà bất cứ Doanh Nghiệp nào cũng cần phải có, để tiếp cận thị trường, tiếp cận Khách Hàng tiềm năng của mình. Là một Doanh Nghiệp chuyên ngành in ấn giấy, chúng tôi mong muốn được góp một phần công sức của mình vào sự thành công và phát triển của quý vị. </p>
                             </div>
-                            <button className='btn btn-innhanh'>XEM THÊM<i class="fa fa-angle-double-right"></i></button>
+                            <Link className='btn btn-innhanh' to={"/in-nhanh-gia-re"}>XEM THÊM<i class="fa fa-angle-double-right"></i></Link>
+                           
                         </div>
                         <div className='col-xl-5 col-md-12'>
                             <div className='container'>
@@ -63,158 +182,36 @@ function HomePage(props) {
                         <h3>Sản Phẩm Của <span>INNHANH79</span></h3>
                     </div>
                     <div className='row'>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <div className='produc_icon'>
-                                        <EvenlopeIcon />
-                                    </div>
+                        {
+                            ProducInNhanh.map((item, index) => {
+                                return (
+                                    <div key={index} className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
+                                        <div className='productions_item'>
+                                            <div className='produc_image'>
+                                                <div className='productions_hearder'>
+                                                    <div className='produc_icon'>
+                                                        {item.icon}
+                                                    </div>
+                                                    <h4>{item.name}</h4>
+                                                </div>
+                                                <img src={item.image} className='img-fluid' alt={item.name} />
+                                            </div>
+                                            <div className='produc_infor'>
+                                                <div className='produc_intro'>
+                                                    <ul className='productions_main-link'>
+                                                        <li>Kích Thước: {item.infor.size}</li>
+                                                        <li>Định Lượng: {item.infor.quantitative}</li>
+                                                        <li>Loại Giấy: {item.infor.paper}</li>
+                                                        <li>{item.infor.tag}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
-                                    <h4>IN BAO THƯ</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: 12 x 22, 17 x 23, 25 x 35</li>
-                                        <li>Định Lượng: 100gsm – 120 gsm</li>
-                                        <li>Loại Giấy: Fort</li>
-                                        <li>In Nhanh, In Offset</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <div className='produc_icon'>
-                                        <NameCard />
+                                        </div>
                                     </div>
-
-                                    <h4>IN NAME CARD</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: 5.3 x 8.8, 5.3 x 9, 5.5 x 9.2</li>
-                                        <li>Định Lượng: 250gsm – 350 gsm</li>
-                                        <li>Loại Giấy: Fort, Couche, Mỹ Thuật</li>
-                                        <li>In Nhanh, In Offset</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <div className='produc_icon'>
-                                        <FlyerIcon />
-                                    </div>
-                                    <h4>IN TỜ RƠI</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: A5, A4, A3, SRA3, 13×19</li>
-                                        <li>Định Lượng: 120gsm - 350 gsm</li>
-                                        <li>Loại Giấy: Fort, Couche, Mỹ Thuật</li>
-                                        <li>In Nhanh, In Offset</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fab fa-elementor"></i>
-                                    <h4>IN MENU</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: A5, A4, A3, SRA3, 13×19</li>
-                                        <li>Định Lượng: 120gsm – 350 gsm</li>
-                                        <li>Loại Giấy: Couche, Mỹ Thuật, Giấy Nhựa</li>
-                                        <li>In Nhanh, In Offset, Bấm Kim, Keo Gáy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fa fa-book-open"></i>
-                                    <h4>IN CATALOGUE</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: A4 Đứng , A4 Nằm Ngang , A5</li>
-                                        <li>Định Lượng: Bìa, Ruột 150 gsm</li>
-                                        <li>Loại Giấy: Fort, Couche, Mỹ Thuật</li>
-                                        <li>In Nhanh, In Offset, Bấm Kim, Keo Gáy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fa fa-folder-open"></i>
-                                    <h4>IN FOLDER</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: 22x31x7</li>
-                                        <li>Định Lượng: 250 gsm – 300 gsm</li>
-                                        <li>Loại Giấy: Fort, Couche, Mỹ Thuật</li>
-                                        <li>Màng Bóng, Màng Mờ</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fa fa-envelope"></i>
-                                    <h4>IN HÓA ĐƠN, BIỂU MẪU</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: 14×20, 20×28</li>
-                                        <li>Định Lượng: 52 gsm – 55 gsm</li>
-                                        <li>Loại Giấy: Fort, Carbonless</li>
-                                        <li>2, 3, 4 liên, bấm kim, keo gáy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <i class="fa fa-envelope-open-text"></i>
-                                    <h4>IN THIỆP CƯỚI HIỆN ĐẠI</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: có sẵn hoặc tùy chọn</li>
-                                        <li>Định Lượng: 200 gsm – 350 gsm</li>
-                                        <li>Loại Giấy: Fort, Mỹ Thuật, Couche</li>
-                                        <li>Cấn bế dán thành phẩm</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-6 col-md-6 col-sm-12'>
-                            <div className='productions_item'>
-                                <div className='productions_hearder'>
-                                    <TickerIcon />
-                                    <h4>IN TEM DECAL, STICKER</h4>
-                                </div>
-                                <div className='productions_main'>
-                                    <ul className='productions_main-link'>
-                                        <li>Kích Thước: tùy chọn</li>
-                                        <li>Định Lượng: 120 gsm</li>
-                                        <li>Loại Giấy Decal : Decal giấy, Nhựa, Trong , Kraft</li>
-                                        <li>Cắt bế hình dạng theo yêu cầu</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

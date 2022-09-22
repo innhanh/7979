@@ -87,25 +87,25 @@ function Hearder(props) {
                     <nav className='hearder_Top_nav navbar'>
                         <ul className='navbar-nav mr-auto hearder_Top_Left'>
                             <li className='nav-item'>
-                                <Link className='nav-link' to={"#"}>
+                                <Link className='nav-link' to={"/in-nhanh-gia-re"}>
                                     <i className="fa fa-angle-right"></i>
                                     Giới Thiệu
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link className='nav-link' to={"#"}>
+                                <Link className='nav-link' to={"/thanh-toan"}>
                                     <i className="fa fa-angle-right"></i>
                                     Thanh Toán
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link className='nav-link' to={"#"}>
+                                <Link className='nav-link' to={"/thoa-thuan-chinh-sach"}>
                                     <i className="fa fa-angle-right"></i>
                                     Thỏa Thuận {"&"} Chính Sách
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link className='nav-link' to={"#"}>
+                                <Link className='nav-link' to={"/lien-he"}>
                                     <i className="fa fa-angle-right"></i>
                                     Liên Hệ
                                 </Link>
@@ -177,6 +177,9 @@ function Hearder(props) {
                                 </li>
                                 <li className="nav-item active">
                                     <Link to={"/"} className='nav-link'>THIẾT KẾ - SÁNG TẠO</Link>
+                                </li>
+                                <li className="nav-item active">
+                                    <Link to={"/"} className='nav-link'>SETUP ENVENT</Link>
                                 </li>
                             </ul>
                         </div>
