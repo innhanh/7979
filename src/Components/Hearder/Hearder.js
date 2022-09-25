@@ -22,8 +22,8 @@ const innhanh = [
 
 
 function Hearder(props) {
-    const [light, setLight] = useState(true);   
-    const [scrollY, setScrollY] = useState();  
+    const [light, setLight] = useState(true);
+    const [scrollY, setScrollY] = useState();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,11 +45,11 @@ function Hearder(props) {
             if (scrollY > 173) {
                 hearderTop.classList.add("hide");
                 hearderMain.classList.add("scroll-to-top");
-                btnScroll.classList.add("btnShow");          
+                btnScroll.classList.add("btnShow");
             } else {
                 hearderTop.classList.remove("hide");
                 hearderMain.classList.remove("scroll-to-top");
-                btnScroll.classList.remove("btnShow");               
+                btnScroll.classList.remove("btnShow");
             }
         };
 
@@ -114,10 +114,14 @@ function Hearder(props) {
 
                         <ul className='navbar-nav ml-auto align-items-center'>
                             <li className='nav-item'>
-                                <Link className='nav-link hotline' to={"#"}>
+                                <a href='tel:0888229079' className='nav-link hotline'>
                                     <i className="fa fa-phone-volume"></i>
                                     0888.229.079
-                                </Link>
+                                </a>
+                                {/* <Link className='nav-link hotline' to={""}>
+                                    <i className="fa fa-phone-volume"></i>
+                                    0888.229.079
+                                </Link> */}
                             </li>
                             <li className='nav-item'>
                                 <div className='btn_theme' onClick={() => setLight(!light)}>

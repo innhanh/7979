@@ -8,7 +8,7 @@
         transition: 0.5s;
         transform: translate(100%, -6%);
         animation-name: image1;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         animation-delay: 1.5s;
@@ -19,7 +19,7 @@
         transition: 0.5s;
         transform: translate(100%, 30%);
         animation-name: image2;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         animation-delay: 2s;
@@ -34,7 +34,7 @@
     #text {
         transform: translateX(-100%);
         animation-name: AnimationText;
-        animation-duration: 5s;
+        animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-delay: 0.5s;
         #text_i {
@@ -44,7 +44,7 @@
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation-name: dashText;
-            animation-duration: 4s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
             animation-delay: 2s;
@@ -58,10 +58,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 3s;
+            animation-delay: 2.1s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -72,10 +72,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 3.5s;
+            animation-delay: 2.2s;
             opacity: 0;
             transition: 1.5s;
         }
@@ -86,10 +86,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 4s;
+            animation-delay: 2.3s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -100,10 +100,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 4.5s;
+            animation-delay: 2.4s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -114,10 +114,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 5s;
+            animation-delay: 2.5s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -128,10 +128,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 5.5s;
+            animation-delay:2.6s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -142,10 +142,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 6s;
+            animation-delay: 2.7s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -156,10 +156,10 @@
             stroke-dashoffset: 1000;
             stroke-width: 5px;
             animation-name: dashText;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            animation-delay: 6s;
+            animation-delay: 2.8s;
             opacity: 0;
             transition: 0.5s;
         }
@@ -171,10 +171,10 @@
         stroke-dashoffset: 1000;
         stroke-width: 5px;
         animation-name: line_After;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
-        animation-delay: 7s;
+        animation-delay: 2.9s;
         opacity: 0;
         transition: 0.5s;
     }

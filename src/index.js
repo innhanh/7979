@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import LoadingPage from './Pages/Loading/LoadingPage';
 
 import "./style/theme.scss";
-import './index.scss';
+import './style/index.scss';
 
 
 

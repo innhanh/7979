@@ -1,77 +1,86 @@
 import React from 'react';
 import 'animate.css';
 import "./carousel.scss";
-import banner1 from "../../Access/Image/BannerCarousel/banner1.jpg";
-import banner2 from "../../Access/Image/BannerCarousel/banner2.jpg";
-import banner3 from "../../Access/Image/BannerCarousel/banner3.jpg";
-import banner4 from "../../Access/Image/BannerCarousel/banner4.jpg";
-import banner5 from "../../Access/Image/BannerCarousel/banner5.jpg";
-import banner6 from "../../Access/Image/BannerCarousel/banner6.jpg";
+import bannerInNhanh from "../../Access/Carousel/bannerInNhanh.jpg";
+import bannerQuangCao from "../../Access/Carousel/bannerQuangCao.jpg";
+import bannerInBanVe from "../../Access/Carousel/inBanVe.jpg";
+import dvThietKe from "../../Access/Carousel/dvThietKe.jpg";
+import thietkeBNDTH from "../../Access/Carousel/thietKeBNDTH.jpg";
+import setupEvent from "../../Access/Carousel/setupEvent.jpg";
 import { Link } from 'react-router-dom';
+import BannerHome from './BannerHome';
+
 
 
 function Carousel(props) {
 
     return (
         <div id='myCarousel' className='container'>
-            <div id="innhanhCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#innhanhCarousel" data-slide-to="0" class="active"></li>
+            <div id="innhanhCarousel" className="carousel slide" data-ride="carousel">
+                {/* <ol className="carousel-indicators">
+                    <li data-target="#innhanhCarousel" data-slide-to="0" className="active"></li>
                     <li data-target="#innhanhCarousel" data-slide-to="1"></li>
                     <li data-target="#innhanhCarousel" data-slide-to="2"></li>
                     <li data-target="#innhanhCarousel" data-slide-to="3"></li>
                     <li data-target="#innhanhCarousel" data-slide-to="4"></li>
                     <li data-target="#innhanhCarousel" data-slide-to="5"></li>
-                </ol>
+                </ol> */}
 
-                <div class="carousel-inner">
-                    <div class="carousel-item item1 active">
-                        <img src={banner1} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/in-tui-giay"}>Xem Thêm</Link>
+                <div className="carousel-inner">
+                    <div className="carousel-item item1 active">
+                        <BannerHome />
+                        <div className='innhanh_text'>
+                            <h1 className='text1'>In <span>Bản Vẽ</span></h1>
+                            <h1 className='text2'>In <span className='text_orange'>Nhanh</span> <span>{"&"}</span></h1>
+                            <h1 className='text3'>In <span>Quảng Cáo</span></h1>
+                            <h1 className='carousel_contact'>
+                                <a href='tel:0888229079' className='nav-link hotline text_orange'>
+                                    <i className="fa fa-phone-volume"></i>
+                                    0888.229.079
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
 
-                        </div>
-                    </div>
-                    <div class="carousel-item item2">
-                        <img src={banner2} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/in-qc-pp"}>Xem Thêm</Link>
-                        </div>
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={bannerInNhanh} alt='banner In Nhanh' />
+                        <Link className='btn btn_readmore' to={"/in-tui-giay"}>Xem thêm</Link>
                     </div>
 
-                    <div class="carousel-item item3">
-                        <img src={banner3} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/-thiet-ke-nhan-dang-thuong-hieu"}>Xem Thêm</Link>
-                        </div>
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={bannerQuangCao} alt='banner In Quảng Cáo' />
+                        <Link className='btn btn_readmore' to={"/in-tui-giay"}>Xem thêm</Link>
                     </div>
-                    <div class="carousel-item item4">
-                        <img src={banner4} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/dich-vu-thiet-ke"}>Xem Thêm</Link>
-                        </div>
+
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={bannerInBanVe} alt='banner In Bản Vẽ' />
+                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
                     </div>
-                    <div class="carousel-item item5">
-                        <img src={banner5} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/in-ban-ve"}>Xem Thêm</Link>
-                        </div>
+
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={dvThietKe} alt='banner Dịch Vụ Thiết Kế' />
+                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
                     </div>
-                    <div class="carousel-item item6">
-                        <img src={banner6} class="d-block w-100" alt="banner1" />
-                        <div className='btn_readmore'>
-                            <Link className='btn' to={"/setup-event"}>Xem Thêm</Link>
-                        </div>
+
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={thietkeBNDTH} alt='banner Thiết Kế BNDTH' />
+                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
+                    </div>
+
+                    <div className="carousel-item">
+                        <img className='w-100 img-fluid' src={setupEvent} alt='banner Setup Event' />
+                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
                     </div>
 
                 </div>
-                <button id='btn_PreviousCarousel' class="carousel-control-prev" type="button" data-target="#innhanhCarousel" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+
+                <button id='btn_PreviousCarousel' className="carousel-control-prev" type="button" data-target="#innhanhCarousel" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
                 </button>
-                <button id='btn_NextCarousel' class="carousel-control-next" type="button" data-target="#innhanhCarousel" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                <button id='btn_NextCarousel' className="carousel-control-next" type="button" data-target="#innhanhCarousel" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
                 </button>
             </div>
         </div>

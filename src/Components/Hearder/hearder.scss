@@ -30,47 +30,7 @@
                             @include textStyle(white, 0.75rem, bold);
                             margin-right: 0.4rem;
                         }
-                    }
-                    .hotline {
-                        @include textStyle(white, 1.7rem, 500);
-                        margin-right: 2rem;
-                        i {
-                            @include textStyle(white, 1.7rem, bold);
-                            transform: rotate(-30deg);
-                            margin-right: 1rem;
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            background-color: rgb(207, 23, 23);
-                            line-height: 50px;
-                            text-align: center;
-
-                            padding: 0;
-                            animation-name: rotate;
-                            animation-duration: 0.5s;
-                            animation-iteration-count: infinite;
-                            position: relative;
-                            z-index: 9999999 !important;
-                            &::after {
-                                content: "";
-                                width: 50px;
-                                height: 50px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                border-radius: 50%;
-                                display: block;
-                                border: 1px solid rebeccapurple;
-                                // background-color: rgb(255, 68, 0);
-                                animation-name: border;
-                                animation-duration: 0.5s;
-                                animation-iteration-count: infinite;
-                                transition: 0.5s;
-                                opacity: 0;
-                            }
-                        }
-                    }
+                    }                  
                     .btn_theme {
                         color: white;
                         border: 1px solid white;
