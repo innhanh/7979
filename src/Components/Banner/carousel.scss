@@ -1,4 +1,5 @@
 @import "../../style/valiable";
+@import "../../style/animation";
 
 #myCarousel {
     // background-color: white;
@@ -31,22 +32,69 @@
 
                 .innhanh_text {
                     position: absolute;
-                    top: 45%;
+                    top: 35%;
                     left: 10%;
 
-                    h1 {
-                        font-family: UTMAvo;
-                        @include textStyle($color-bg, 2rem, 400);
+                    .carousel-link {
+                        margin: 1rem 0;
+                        transform: translateX(-100%);
+                        opacity: 0;
 
-                        span {
-                            font-family: UTMAvoBold;
-                            @include textStyle($color-bg, 2rem, 700);
+                        a {
+                            background-color: $color-bg;
+                            padding: 0.5rem 2rem;
+                            text-decoration: none;
+                            @include textStyle(white, $fs30, 400);
+
+                            span {
+                                font-family: UTMAvoBold;
+                                @include textStyle(white, $fs30, 700);
+
+                                span {
+                                    font-family: UTMAvo;
+                                    @include textStyle(white, $fs30, 200);
+                                }
+                            }
                         }
                     }
 
-                    .carousel_contact {
+                    .text-1 {
+                        animation-name: fadeLeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2.9s;
+                    }
+
+                    .text-2 {
+                        animation-name: fadeLeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2.6s;
+                    }
+
+                    .text-3 {
+                        animation-name: fadeLeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2.3s;
+                    }
+
+                    .text-4 {
+                        animation-name: fadeLeftToRight;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2s;
+                    }
+
+                    .carousel-contact {
+                        transform: translateX(-100%);
+                        opacity: 0;
                         margin-top: 1rem;
-                        font-family: UTMAvo;                    
+                        font-family: UTMAvo;
                         @include textStyle($color-bg, 2rem, 600);
 
                         a {
@@ -55,8 +103,9 @@
                             @include textStyle($color-bg, 3rem, 400);
                             text-decoration: none;
                             transition: 1s;
-                            &:hover{
-                                color: $color-bg!important;
+
+                            &:hover {
+                                color: $color-bg  !important;
                             }
                         }
                     }

@@ -30,15 +30,23 @@ function Carousel(props) {
                     <div className="carousel-item item1 active">
                         <BannerHome />
                         <div className='innhanh_text'>
-                            <h1 className='text1'>In <span>Bản Vẽ</span></h1>
-                            <h1 className='text2'>In <span className='text_orange'>Nhanh</span> <span>{"&"}</span></h1>
-                            <h1 className='text3'>In <span>Quảng Cáo</span></h1>
-                            <h1 className='carousel_contact'>
-                                <a href='tel:0888229079' className='nav-link hotline text_orange'>
-                                    <i className="fa fa-phone-volume"></i>
+                            <div className='carousel-link text-1'>
+                                <Link to={"/in-ban-ve"}>In <span>Bản Vẽ</span></Link>
+                            </div>
+
+                            <div className='carousel-link text-2'>
+                                <Link to={"/in-tui-giay"}>In <span>Nhanh <span>{"&"}</span></span></Link>
+                            </div>
+
+                            <div className='carousel-link text-3'>
+                                <Link to={"/in-qc-pp"}>In <span>Quảng Cáo</span></Link>
+                            </div>
+                            <div className='carousel-contact text-4'>
+                                <a href='tel:0888229079' className='hotline text_orange'>
                                     0888.229.079
                                 </a>
-                            </h1>
+                            </div>
+
                         </div>
                     </div>
 
