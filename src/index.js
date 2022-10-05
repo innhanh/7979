@@ -11,8 +11,6 @@ import LoadingPage from './Pages/Loading/LoadingPage';
 import "./style/theme.scss";
 import './style/index.scss';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -26,8 +24,7 @@ setTimeout(() => {
     <React.StrictMode>
       <Provider store={Store}>
         <PersistGate loading={null} persistor={persistor}>
-          <App />
-          {/* <LogoLight/> */}
+          <App />          
         </PersistGate>
       </Provider>
     </React.StrictMode>

@@ -4,6 +4,9 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER, } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import AdminSlice from "./Slice/AdminSlice";
+import ErrorSlice from "./Slice/ErrorSlice";
+import ImageSlice from "./Slice/ImageSlice";
+import MaintenanceSlice from "./Slice/MaintenanceSlice";
 import UserSlice from "./Slice/UserSlice";
 
 export const MenuDashboard = [
@@ -36,7 +39,10 @@ const persistConfig = {
 };
 const rootReducer = combineReducers({
     AdminSlice: AdminSlice.reducer,
-    UserSlice: UserSlice.reducer
+    UserSlice: UserSlice.reducer,
+    ImageSlice: ImageSlice.reducer,
+    ErrorSlice: ErrorSlice.reducer,
+    MaintenanceSlice: MaintenanceSlice.reducer
 });
 
 

@@ -157,7 +157,7 @@ function HomePage(props) {
                                 <p><Link to={"/"}>In Nhanh</Link> là một lĩnh vực đang rất phát triển tại Việt Nam, đặt biệt là các thành phố lớn, thành phố du lịch, khi sự hội nhập đòi hỏi sự chuyên nghiệp và nhanh chóng chính xác cao cùng với đời sống kinh tế ngày càng đi lên thì quan điểm về quảng cáo, khuyến mãi cũng không ngừng thay đổi. Trong đó, xu hướng chung là mọi Khách Hàng ngày càng khắt khe hơn với những ấn phẩm quảng cáo, những thông điệp mà bất cứ Doanh Nghiệp nào cũng cần phải có, để tiếp cận thị trường, tiếp cận Khách Hàng tiềm năng của mình. Là một Doanh Nghiệp chuyên ngành in ấn giấy, chúng tôi mong muốn được góp một phần công sức của mình vào sự thành công và phát triển của quý vị. </p>
                             </div>
                             <Link className='btn btn-innhanh' to={"/in-nhanh-gia-re"}>XEM THÊM<i class="fa fa-angle-double-right"></i></Link>
-                           
+
                         </div>
                         <div className='col-xl-5 col-md-12'>
                             <div className='container'>

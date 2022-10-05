@@ -1,30 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'animate.css';
 import "./carousel.scss";
-import bannerInNhanh from "../../Access/Carousel/bannerInNhanh.jpg";
-import bannerQuangCao from "../../Access/Carousel/bannerQuangCao.jpg";
-import bannerInBanVe from "../../Access/Carousel/inBanVe.jpg";
-import dvThietKe from "../../Access/Carousel/dvThietKe.jpg";
-import thietkeBNDTH from "../../Access/Carousel/thietKeBNDTH.jpg";
-import setupEvent from "../../Access/Carousel/setupEvent.jpg";
 import { Link } from 'react-router-dom';
 import BannerHome from './BannerHome';
+import { useDispatch, useSelector } from 'react-redux';
+import { ApiConfig } from '../../Config/API/apiConfig';
+import { CarouselSuccess } from '../../Redux/Slice/ImageSlice';
+import { Selector } from '../../Redux/Selector';
 
 
 
 function Carousel(props) {
+    
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const GetImageCarousel = async () => {
+            await ApiConfig.Images.GetImageCarousel(4, dispatch, CarouselSuccess);
+        };
+        GetImageCarousel();
+    }, []);
+
+    const ListImageCarousel = useSelector(Selector.Images.SelectorImageCarousel);
 
     return (
         <div id='myCarousel' className='container'>
             <div id="innhanhCarousel" className="carousel slide" data-ride="carousel">
-                {/* <ol className="carousel-indicators">
-                    <li data-target="#innhanhCarousel" data-slide-to="0" className="active"></li>
-                    <li data-target="#innhanhCarousel" data-slide-to="1"></li>
-                    <li data-target="#innhanhCarousel" data-slide-to="2"></li>
-                    <li data-target="#innhanhCarousel" data-slide-to="3"></li>
-                    <li data-target="#innhanhCarousel" data-slide-to="4"></li>
-                    <li data-target="#innhanhCarousel" data-slide-to="5"></li>
-                </ol> */}
 
                 <div className="carousel-inner">
                     <div className="carousel-item item1 active">
@@ -35,7 +36,7 @@ function Carousel(props) {
                             </div>
 
                             <div className='carousel-link text-2'>
-                                <Link to={"/in-tui-giay"}>In <span>Nhanh <span>{"&"}</span></span></Link>
+                                <Link to={"/in-tui-giay"}>In <span className='text_orange'>Nhanh <span>{"&"}</span></span></Link>
                             </div>
 
                             <div className='carousel-link text-3'>
@@ -49,36 +50,16 @@ function Carousel(props) {
 
                         </div>
                     </div>
+                    {
+                        ListImageCarousel?.map((carousel, index) => {
+                            return (
+                                <div key={index} className="carousel-item">
+                                    <img className='w-100 img-fluid' src={carousel.url} alt={carousel.name} />
+                                </div>
 
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={bannerInNhanh} alt='banner In Nhanh' />
-                        <Link className='btn btn_readmore' to={"/in-tui-giay"}>Xem thêm</Link>
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={bannerQuangCao} alt='banner In Quảng Cáo' />
-                        <Link className='btn btn_readmore' to={"/in-tui-giay"}>Xem thêm</Link>
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={bannerInBanVe} alt='banner In Bản Vẽ' />
-                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={dvThietKe} alt='banner Dịch Vụ Thiết Kế' />
-                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={thietkeBNDTH} alt='banner Thiết Kế BNDTH' />
-                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className='w-100 img-fluid' src={setupEvent} alt='banner Setup Event' />
-                        <Link className='btn btn_readmore' to={"/in-ban-ve"}>Xem thêm</Link>
-                    </div>
+                            )
+                        })
+                    }
 
                 </div>
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from '../../Pages/Home/HomePage';
 import IntroPage from '../../Pages/Intro/Intro';
 
@@ -32,8 +32,11 @@ import Register from '../../Pages/Admin/Register/Register';
 import ResetPass from '../../Pages/Admin/ResetPass/ResetPass';
 import Dashboard from '../../Pages/Admin/Dashboard/Dashboard';
 
+
 function RouterConfig(props) {
+       
     const { pathname } = useLocation();
+   
     useEffect(() => {
         const ScrollToTop = () => {
             window.scroll(0, 0)
