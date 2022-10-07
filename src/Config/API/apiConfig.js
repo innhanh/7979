@@ -26,7 +26,7 @@ export const ApiConfig = {
     Maintenances: {
         CheckMaintenances: async (dispatch, MaintenanceSuccess) => {
             await axiosClient({
-                method: "post",
+                method: "get",
                 url: "/maintenances/check"
             }).then((res) => {
                 dispatch(MaintenanceSuccess(res.data.Maintenance.on))
